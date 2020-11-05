@@ -34,7 +34,7 @@ $(document).ready(function () {
 }());
 
 
-/*function sum()
+function sum()
 
 {
 
@@ -46,7 +46,7 @@ for(i=0;i<22;i++)
 
 document.form.res.value=k;
 
-}*/
+}
 
 
 
