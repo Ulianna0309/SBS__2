@@ -1,3 +1,19 @@
+$('.slider__block').slick({
+   dots: false,
+  arrows: true,
+  infinite: false,
+  slidesToScroll: 1,
+  speed: 500,
+  variableWidth: true,
+  responsive: [
+    {
+      breakpoint: 770,
+      settings: "unslick"
+    }
+]
+});
+
+
 $(document).ready(function () {
     $('.header-navigation__btn').click(function () {
         $(this).toggleClass('header-navigation__btn--active ');
@@ -9,7 +25,7 @@ $(document).ready(function () {
 (function () {
     const header = document.querySelector('.header');
     window.onscroll = () => {
-        if (window.pageYOffset > 50) {
+        if (window.pageYOffset > 20) {
             header.classList.add('header__active');
         } else {
             header.classList.remove('header__active');
@@ -35,7 +51,7 @@ document.form.res.value=k;
 
 
 var steps = [false, false, false, false, false, false, false, false];
-var curr_step = 0;
+var curr_step = 1;
 
 var int_val = 0; //для проверки площади
 
@@ -55,7 +71,7 @@ function set_history(index) {
 // переходы по шагам
 function to_step(index, need_push) {
     curr_step = index;
-    for (var i = 0; i < steps.length; i++) {
+    for (var i = 1; i < steps.length; i++) {
         if (!$("#step" + i).is(':hidden')) {
             $("#step" + i).hide();
         }
@@ -71,7 +87,7 @@ function to_step(index, need_push) {
             $("#other_steps").hide();
             $("#last_step").show();
         }
-    } else if (index > 0) { // если шаг больше ноля
+    } else if (index > 1) { // если шаг больше ноля
         if ($("#other_steps").is(':hidden')) { $("#other_steps").show(); }
         if (!$("#last_step").is(':hidden')) { $("#last_step").hide(); }
     } else if (!$("#other_steps").is(':hidden')) { // если шаг равен нолю
@@ -127,14 +143,14 @@ function validateEmail($email) {
 // Проверки полей по шагам и уведомления при незаполненных полях
 (function($) {
     
-    $(document).ready(function() { to_step(0, true); }); // задаем первоначальный индекс
+    $(document).ready(function() { to_step(1, true); }); // задаем первоначальный индекс
     
     /*$("#to_step1").click(function(event) {
         event.preventDefault();
         to_step(1, true);
     });*/
 
-    $("#to_step1").click(function(event) {
+    $("#to_step2").click(function(event) {
         event.preventDefault();
         if (check_radio_selected("type-home1", "Укажите платформу")) {
             to_step(2, true);

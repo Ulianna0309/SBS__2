@@ -290,8 +290,8 @@ a{
     padding: 0;
 }
 img {
-   max-width: 50px;
-    height: auto;
+    width: 40px;
+    height: 40px;
 }
 body {
   font-family: "Montserrat";
@@ -758,7 +758,7 @@ body {
           box-sizing: border-box;
   border-radius: 6px;
   display: block; 
-  padding: 18px 25px; 
+ padding: 20px 10px;
   height: 100%;
 }
 .step-quest{
@@ -815,7 +815,8 @@ border: 1px solid #D9D9D9;
 -webkit-box-sizing: border-box;
         box-sizing: border-box;
 border-radius: 6px;
-height: 58px
+height: 58px;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .quiz__about{
@@ -895,9 +896,12 @@ color: #ffffff;
   display: none;
 }
 .acceptance__link{
-  color: #808080 !important;
+  color: #159890 !important;
   margin-top: 15px;
-  margin-bottom: 42PX;
+  margin-bottom: 42px;
+  text-decoration: underline;
+  font-weight: 600;
+
 }
 .submit{
   margin-top: 42px;
@@ -905,6 +909,80 @@ color: #ffffff;
 .visible{
   display: none;
 }
+.slider__block{
+  max-width: 100%;
+  padding: 0;
+}
+.slider__item{
+  margin-right:10px;
+}
+.slick-prev:before, .slick-next:before {
+    font-family: 'slick';
+    font-size: 20px;
+    line-height: 1;
+    opacity: .75;
+    color: black;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.slick-prev.slick-disabled:before, .slick-next.slick-disabled:before {
+    opacity: 1; 
+}
+#quiz .btn.back_btn {
+    background: #159890;
+}
+#quiz .btn__submit{
+  cursor: pointer;
+    padding: 8px 50px;
+    display: inline-block;
+    border-radius: 3px;
+    font-size: 15px;
+    border: 1px solid #fff;
+    text-decoration: none;
+    background: #981564;
+    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+    letter-spacing: 0.5px;
+    color: #F5F4F6;
+    width: 270px;
+    margin-bottom: 40px;
+}
+#step6 > #progress_bar{
+  display: none !important;
+}
+.slick-initialized .slick-slide {
+    outline: none;
+}
+
+    [data-tooltip] {
+    position: relative; /* Относительное позиционирование */
+     z-index: 1000;
+   }
+   [data-tooltip]::after {
+    content: attr(data-tooltip); /* Выводим текст */
+    position: absolute; /* Абсолютное позиционирование */
+    width: 250px; /* Ширина подсказки */
+   left: 21px; top: 0px; /* Положение подсказки */
+    background: rgba(51,50,48,.95); /* Синий цвет фона */
+    color: #fff; /* Цвет текста */
+    padding: 0.5em; /* Поля вокруг текста */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Параметры тени */
+    /*pointer-events: none; /* Подсказка */
+    opacity: 0; /* Подсказка невидима */
+    transition: 1s; /* Время появления подсказки */
+     border-radius: 5px;
+     z-index: 10000;
+     font-size: 8px;
+     line-height: 10px;
+     height: 50px;
+   } 
+   [data-tooltip]:hover::after {
+    opacity: 1; /* Показываем подсказку */
+    top: 2em; /* Положение подсказки */
+    z-index: 10000;
+    background: rgba(51,50,48,.95);
+   }
 
 
 
@@ -1068,18 +1146,28 @@ input[type="text"], .inout__span{
     letter-spacing: 1.5px;
     color: #333230;
 }
+.contact__form-connect img{
+  width: 20px;
+  height: auto;
+}
 @media screen and (max-device-width: 1024px) { 
   #quiz h2 {margin-bottom: 50px !important;}
   .step-quest {margin-bottom: 15px;}
   #type-home > *, #type-repair > * { text-align: left; margin-bottom: 15px;}
   .step-quest > * {margin-bottom: 15px;}
   .step-quest > * label {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; -webkit-box-align:
-    center; -ms-flex-align:
-    center; align-items:
-    center; padding: 15px;
+   width: 270px;
+    height: 113px;
+    left: 617px;
+    top: 484px;
+    background: #FFFFFF;
+    border: 1px solid #D9D9D9;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 6px;
+    display: block;
+    padding: 30px;
+    height: 100%;
     }
   .step-quest > * img {
    margin-bottom: 0;
@@ -1100,7 +1188,7 @@ input[type="text"], .inout__span{
   .step-quest > * img {}
   .step-quest > * label {
     text-align: center;
-    padding: 10px 15px;
+    padding: 30px;
   }
   #contact_fields > * {
     width: 90%;
@@ -1172,6 +1260,9 @@ input[type="text"], .inout__span{
   .step-quest__1{
     margin: 0 auto !important;
   }
+  .slider__block{
+  max-width: 90%;
+}
  
 
 }
@@ -1270,6 +1361,18 @@ input[type="text"], .inout__span{
 
 
   @media  only screen and (max-width:768px){
+    h2{
+      font-size: 20px;
+    }
+
+
+     .slider__block{
+  max-width: 270px;
+}
+.slider__item {
+    margin-right: 0;
+}
+ 
     .visible{
       display: block;
       margin-bottom: 0;
@@ -1468,6 +1571,9 @@ input[type="text"], .inout__span{
     display: -ms-flexbox;
     display: flex;
   }
+  #contact_fields > * {
+    width: 100%;
+}
    
 
 }

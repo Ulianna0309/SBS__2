@@ -139,14 +139,12 @@
                 </div>
             </div>
         </section>
-        <section class="price"id="price">
+        <section class="price" id="price">
             <div class="price__sale">
                 <img src="img/sale.svg" alt="sale" class="price__img">
-                <a href="#" class="price__sale-text-link">
-                    <p class="price__sale-text">Получите скидку 10%<br>
-                        на Ваш проект! <a href="#" class="price__sale-link">подробнее... </a>
-                    </p>
-                </a>
+                <p class="price__sale-text">Получите скидку 10%<br>
+                    на Ваш проект! <a href="#" class="price__sale-link">подробнее... </a>
+                </p>
             </div>
             <div class="price__sale-mobile">
                 <img src="img/price__mob.svg" alt="sale" class="price__img">
@@ -341,10 +339,14 @@
                         <h2 class="contact__form-title">Давайте вместе создадим<br> что-то грандиозное!</h2>
                         <form action="mail.php" method="POST">
                             <label for="first_name" class="form__name">Ваше имя</label>
-                            <input id="first_name" type="text" class="form__input" name="name" required>
+                            <input id="first_name" type="text" class="form__input" name="name1" required>
                             <label for="last__email" class="form__name">Ваш email</label>
-                            <input id="last__email" type="email" class="form__input" name="email" required>
-                            <input type="submit" class="form__btn" value="Оставить заявку">
+                            <input id="last__email" type="email" class="form__input" name="email1" required>
+                            <div id="acceptance-line" class="acceptance-line">
+                                <input id="acceptance" type="checkbox" name="acceptance" value="" required>
+                                <label for="acceptance">Я ознакомлен(-а) с <a href="politic.html" target="_blank" class="acceptance__link">политикой конфиденциальности</a> ознакомлен</label>
+                            </div> 
+                            <input type="submit" class="form__btn" name="sub" value="Оставить заявку">
                         </form>
                     </div>
                     <div class="contact__form-right">
@@ -393,7 +395,7 @@
         </div>
     </footer>
    
-    <footer class=" footer footer__mobile" id="footer">
+    <footer class=" footer footer__mobile" id="footer__mobile">
         <div class="wrapper">
             <div class="footer__contact">
                 <div class="contact__form-subtitle">

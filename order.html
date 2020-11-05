@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SBS</title>
     <meta name="description" content="">
+     <link rel="stylesheet" href="./css/slick.css">
+    <link rel="stylesheet" href="./css/slick-theme.css">
     <link rel="stylesheet" href="./css/order.css">
 </head>
 <body>
@@ -46,6 +48,7 @@
     <main class="main">
         <section class="politic__bg block" id="intro">
             <div class="intro__wrapper block">
+                <h2 class="politic__hidden">Price</h2>
             </div>
         </section>
     <section class="quiz">
@@ -58,65 +61,75 @@
             <div id="quiz">
                 <form action="file.php" method="POST" id="quiz_form" name="form">
                     <input type="hidden" name="uri" value="https://site.ru"/> 
-                    <div id="step0">
+                    <div id="step1">
                         <h1 class="quiz__title">Рассчитайте стоимость услуги</h1>
                         <p class="quiz__text">Узнайте стоимость создания приложения, ответив на несколько простых вопросов! Перед тем, как заказывать услугу, выберите в калькуляторе нужный функционал и набор опций. Меняя эти настройки, вы поймете от чего зависит итоговая цена приложения.</p>
                         <div class="mobile__text"><p class="mobile__text-text">Узнайте стоимость создания приложения, ответив на 6 простых вопросов!</p>Перед тем, как заказывать услугу, выберите в калькуляторе нужный функционал и набор опций. Меняя эти настройки, вы поймете от чего зависит итоговая цена приложения.</div>
                         <p class="mobile__text subtitle">Выберете пункт и нажмите «далее»</p>
                         <div id="type-home" class="step-quest">
-                            <div>   
-                                <label for="step__null" class="checkout another__bg">
-                                    <input id="step__null" type="radio" name="type-home1">
-                                        <img src="img/step1.svg" alt="1step">
-                                        <span class="input__desc-name">Поддержка мобильных платформ</span>
-                                </label>
-                            </div>
-                            <div>               
-                                <label for="step__null1" class="another__bg hidden">
-                                    <input id="step__null1" type="radio" name="type-home1">
-                                        <img src="img/2.svg" alt="2step">
-                                        <span class="input__desc-name">Количество экранов</span>
-                                </label>
-                            </div>              
-                            <div>
-                                <label for="step__null2" class="another__bg hidden">
-                                    <input id="step__null2" type="radio" name="type-home1">
-                                        <img src="img/3.svg" alt="2step">
-                                        <span class="input__desc-name">Дизайн</span>
-                                </label>
-                            </div>                  
-                            <div>
-                                <label for="step__null3" class="another__bg hidden">
-                                    <input id="step__null3" type="radio" name="type-home1">
-                                        <img src="img/4.svg" alt="2step">
-                                        <span class="input__desc-name">Функционал</span>
-                                </label>
-                            </div>      
-                             <div>
-                                <label for="step__null4" class="another__bg hidden">
-                                    <input id="step__null4" type="radio" name="type-home1">
-                                        <img src="img/prava.svg" alt="2step">
-                                        <span class="input__desc-name">Права пользования</span>
-                                </label>
-                            </div>     
-                             <div>
-                                <label for="step__null5" class="another__bg hidden">
-                                    <input id="step__null5" type="radio" name="type-home1">
-                                        <img src="img/ser.svg" alt="2step">
-                                        <span class="input__desc-name">Сторонние сервисы</span>
-                                </label>
-                            </div>                              
+                            <div class="slider__block">
+                                <div class="slider__item">
+                                    <div>   
+                                        <label for="step__null" class="checkout another__bg">
+                                            <input id="step__null" type="radio" name="type-home1">
+                                                <img src="img/step1.svg" alt="1step">
+                                                <span class="input__desc-name">Поддержка мобильных платформ</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="slider__item">
+                                    <div >               
+                                        <label for="step__null1" class="another__bg hidden">
+                                            <input id="step__null1" type="radio" name="type-home1" disabled>
+                                                <img src="img/2.svg" alt="2step">
+                                                <span class="input__desc-name">Количество экранов</span>
+                                        </label>
+                                    </div> 
+                                </div>   
+                                <div class="slider__item">          
+                                    <div >
+                                        <label for="step__null2" class="another__bg hidden">
+                                            <input id="step__null2" type="radio" name="type-home1" disabled>
+                                                <img src="img/3.svg" alt="2step">
+                                                <span class="input__desc-name">Дизайн</span>
+                                        </label>
+                                    </div>   
+                                </div> 
+                                <div class="slider__item">              
+                                    <div>
+                                        <label for="step__null3" class="another__bg hidden">
+                                            <input id="step__null3" type="radio" name="type-home1" disabled>
+                                                <img src="img/4.svg" alt="2step">
+                                                <span class="input__desc-name">Функционал</span>
+                                        </label>
+                                    </div>
+                                </div>      
+                                 <div class="slider__item">
+                                    <label for="step__null4" class="another__bg hidden">
+                                        <input id="step__null4" type="radio" name="type-home1" disabled>
+                                            <img src="img/prava.svg" alt="2step">
+                                            <span class="input__desc-name">Права пользования</span>
+                                    </label>
+                                </div>     
+                                 <div class="slider__item">
+                                    <label for="step__null5" class="another__bg hidden">
+                                        <input id="step__null5" type="radio" name="type-home1" disabled>
+                                            <img src="img/ser.svg" alt="2step">
+                                            <span class="input__desc-name">Сторонние сервисы</span>
+                                    </label>
+                                </div> 
+                            </div>                             
                        </div>
                         <p class="quiz__subtitle">Выберете один или несколько пунктов и нажмите «далее»</p>  
                         <div id="type-home1" class="step-quest">  
-                            <div>   
+                            <div data-tooltip="Mобильное приложение для платформы IOS">   
                                 <label for="tovar0">
                                     <input id="tovar0" value="2500p" onClick="sum()" type="radio" name="type-home1">
-                                    <img src="img/ios_order.svg" alt="1step">
+                                    <img src="img/ios_order.svg" alt="1step" >
                                     <span class="input__desc-name">IOS</span>
                                 </label>
                             </div>
-                            <div>               
+                            <div data-tooltip="Mобильное приложение для платформы Android">              
                                 <label for="tovar1">
                                     <input id="tovar1" value="3000p" onClick="sum()" type="radio" name="type-home1">
                                     <img src="img/android_order.svg" alt="2step">
@@ -125,88 +138,98 @@
                             </div>                        
                         </div>
                         <div class="quiz_buttons">    
-                         <div class="quiz__about-text mobile__text">
-                                 <p class="quiz__about">Предварительная <br>стоимость вашего проекта:</p>
-                                 <span>0p</span>
+                             <div class="quiz__about-text mobile__text">
+                                <p class="quiz__about">Предварительная <br>стоимость вашего проекта:</p>
+                                <span>0p</span>
                             </div>          
-                            <p><a id="to_step1" class="btn">Далее</a></p>
+                            <p><a id="to_step2" class="btn">Далее</a></p>
                             <div class="quiz__about-text hidden">
-                                 <p class="quiz__about">Предварительная <br>стоимость вашего проекта:</p>
-                                 <span>0p</span>
+                                <p class="quiz__about">Предварительная <br>стоимость вашего проекта:</p>
+                                <span>0p</span>
                             </div> 
                         </div> 
-                    </div>            
+                   </div>
                      
                    
 
-                    <div id="other_steps"> 
-                        <div id="step2" class="step">
+                <div id="other_steps"> 
+                    <div id="step2" class="step">
                         <h1 class="quiz__title">Рассчитайте стоимость услуги</h1>
                         <p class="quiz__text">Узнайте стоимость создания приложения, ответив на несколько простых вопросов! Перед тем, как заказывать услугу, выберите в калькуляторе нужный функционал и набор опций. Меняя эти настройки, вы поймете от чего зависит итоговая цена приложения.</p>
                         <div class="mobile__text"><p class="mobile__text-text">Узнайте стоимость создания приложения, ответив на 6 простых вопросов!</p>Перед тем, как заказывать услугу, выберите в калькуляторе нужный функционал и набор опций. Меняя эти настройки, вы поймете от чего зависит итоговая цена приложения.</div>
                        
                         <div id="type-home123" class="step-quest">
-                            <div>   
-                                <label for="step__null21" class="another__bg hidden">
-                                    <input id="step__null21" type="radio" name="type-home2" >
-                                        <img src="img/step1.svg" alt="1step">
-                                        <span class="input__desc-name">Поддержка мобильных платформ</span>
-                                </label>
-                            </div>
-                            <div>               
-                                <label for="step__null22" class="checkout another__bg">
-                                    <input id="step__null22" type="radio" name="type-home2">
-                                        <img src="img/2.svg" alt="2step">
-                                        <span class="input__desc-name">Количество экранов</span>
-                                </label>
-                            </div>              
-                            <div>
-                                <label for="step__null23" class="another__bg hidden">
-                                    <input id="step__null23" type="radio" name="type-home2">
-                                        <img src="img/3.svg" alt="2step">
-                                        <span class="input__desc-name">Дизайн</span>
-                                </label>
+                            <div class="slider__block">
+                                <div class="slider__item">
+                                    <div>   
+                                        <label for="step__null11" class="checkout another__bg hidden">
+                                            <input id="step__null11" type="radio" name="type-home1">
+                                                <img src="img/step1.svg" alt="1step">
+                                                <span class="input__desc-name">Поддержка мобильных платформ</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="slider__item">
+                                    <div>               
+                                        <label for="step__null12" class="checkout another__bg">
+                                            <input id="step__null12" type="radio" name="type-home1" disabled>
+                                                <img src="img/2.svg" alt="2step">
+                                                <span class="input__desc-name">Количество экранов</span>
+                                        </label>
+                                    </div> 
+                                </div>   
+                                <div class="slider__item">          
+                                    <div >
+                                        <label for="step__null13" class="another__bg hidden">
+                                            <input id="step__null13" type="radio" name="type-home1" disabled>
+                                                <img src="img/3.svg" alt="2step">
+                                                <span class="input__desc-name">Дизайн</span>
+                                        </label>
+                                    </div>   
+                                </div> 
+                                <div class="slider__item">              
+                                    <div>
+                                        <label for="step__null14" class="another__bg hidden">
+                                            <input id="step__null14" type="radio" name="type-home1" disabled>
+                                                <img src="img/4.svg" alt="2step">
+                                                <span class="input__desc-name">Функционал</span>
+                                        </label>
+                                    </div>
+                                </div>      
+                                 <div class="slider__item">
+                                    <label for="step__null15" class="another__bg hidden">
+                                        <input id="step__null15" type="radio" name="type-home1" disabled>
+                                            <img src="img/prava.svg" alt="2step">
+                                            <span class="input__desc-name">Права пользования</span>
+                                    </label>
+                                </div>     
+                                 <div class="slider__item">
+                                    <label for="step__null16" class="another__bg hidden">
+                                        <input id="step__null16" type="radio" name="type-home1" disabled>
+                                            <img src="img/ser.svg" alt="2step">
+                                            <span class="input__desc-name">Сторонние сервисы</span>
+                                    </label>
+                                </div> 
                             </div>                  
-                            <div>
-                                <label for="step__null24" class="another__bg hidden">
-                                    <input id="step__null24" type="radio" name="type-home2">
-                                        <img src="img/4.svg" alt="2step">
-                                        <span class="input__desc-name">Функционал</span>
-                                </label>
-                            </div>      
-                             <div>
-                                <label for="step__null25" class="another__bg hidden">
-                                    <input id="step__null25" type="radio" name="type-home2">
-                                        <img src="img/prava.svg" alt="2step">
-                                        <span class="input__desc-name">Права пользования</span>
-                                </label>
-                            </div>     
-                             <div>
-                                <label for="step__null26" class="another__bg hidden">
-                                    <input id="step__null26" type="radio" name="type-home2">
-                                        <img src="img/ser.svg" alt="2step">
-                                        <span class="input__desc-name">Сторонние сервисы</span>
-                                </label>
-                            </div>                                
                         </div>   
                         <p class="mobile__text subtitle">Выберете пункт и нажмите «далее»</p>
                         <p class="quiz__subtitle">Выберете один или несколько пунктов и нажмите «далее»</p>    
-                         <div id="type-home2" class="step-quest">
-                           <div>   
+                        <div id="type-home2" class="step-quest">
+                           <div data-tooltip="Простое маленькое приложение(например, справочник курса валют или приложение для чтения новостей).">   
                                 <label for="tovar2">
                                     <input id="tovar2" value="1500p" onClick="sum()" type="radio" name="type-home2">
                                     <img src="img/s.svg" alt="1step">
                                     <span class="input__desc-name">Колличество экранов до 7</span>
                                 </label>
                             </div>
-                            <div>               
+                            <div data-tooltip="Среднее по размеру приложение (большинство приложений, например, приложение такси).">               
                                 <label for="tovar3">
                                     <input id="tovar3" value="400p" onClick="sum()" type="radio" name="type-home2">
                                     <img src="img/m.svg" alt="2step">
                                     <span class="input__desc-name">Колличество экранов 8-15</span>
                                 </label>
                             </div>      
-                            <div>               
+                            <div data-tooltip="Среднее и большое по размеру приложение(в основном специфические приложения, например, медицинские приложения или приложения банков).">               
                                 <label for="tovar4">
                                     <input id="tovar4" value="2500p" onClick="sum()" type="radio" name="type-home2">
                                     <img src="img/l.svg" alt="2step">
@@ -214,7 +237,8 @@
                                 </label>
                             </div>                    
                         </div> 
-                        <div class="quiz_buttons">              
+                        <div class="quiz_buttons">  
+                            <p><a class="btn back_btn" href="javascript:history.back()">Назад</a></p>            
                             <p><a id="to_step3" class="btn">Далее</a></p>
                             <div class="quiz__about-text">
                                  <p class="quiz__about">Предварительная <br>стоимость вашего проекта:</p>
@@ -227,86 +251,95 @@
 
 
 
-
                     <div id="step3" class="step">
                         <h1 class="quiz__title">Рассчитайте стоимость услуги</h1>
                         <p class="quiz__text">Узнайте стоимость создания приложения, ответив на несколько простых вопросов! Перед тем, как заказывать услугу, выберите в калькуляторе нужный функционал и набор опций. Меняя эти настройки, вы поймете от чего зависит итоговая цена приложения.</p>
                         <div class="mobile__text"><p class="mobile__text-text">Узнайте стоимость создания приложения, ответив на 6 простых вопросов!</p>Перед тем, как заказывать услугу, выберите в калькуляторе нужный функционал и набор опций. Меняя эти настройки, вы поймете от чего зависит итоговая цена приложения.</div>
                         <div id="type-repair1" class="step-quest">
-                            <div>   
-                                <label for="step__null31" class="another__bg hidden">
-                                    <input id="step__null31" type="radio" name="type-repair" >
-                                        <img src="img/step1.svg" alt="1step">
-                                        <span class="input__desc-name">Поддержка мобильных платформ</span>
-                                </label>
-                            </div>
-                            <div>               
-                                <label for="step__null32" class="another__bg hidden">
-                                    <input id="step__null32" type="radio" name="type-repair">
-                                        <img src="img/2.svg" alt="2step">
-                                        <span class="input__desc-name">Количество экранов</span>
-                                </label>
-                            </div>              
-                            <div>
-                                <label for="step__null33" class="checkout another__bg">
-                                    <input id="step__null33" type="radio" name="type-repair">
-                                        <img src="img/3.svg" alt="2step">
-                                        <span class="input__desc-name">Дизайн</span>
-                                </label>
-                            </div>                  
-                            <div>
-                                <label for="step__null34" class="another__bg hidden">
-                                    <input id="step__null34" type="radio" name="type-repair">
-                                        <img src="img/4.svg" alt="2step">
-                                        <span class="input__desc-name">Функционал</span>
-                                </label>
-                            </div>      
-                             <div>
-                                <label for="step__null35" class="another__bg hidden">
-                                    <input id="step__null35" type="radio" name="type-repair">
-                                        <img src="img/prava.svg" alt="2step">
-                                        <span class="input__desc-name">Права пользования</span>
-                                </label>
-                            </div>     
-                             <div>
-                                <label for="step__null36" class="another__bg hidden">
-                                    <input id="step__null36" type="radio" name="type-repair">
-                                        <img src="img/ser.svg" alt="2step">
-                                        <span class="input__desc-name">Сторонние сервисы</span>
-                                </label>
-                            </div>    
-                            </div> 
-                            <p class="mobile__text subtitle">Выберете пункт и нажмите «далее»</p>                             
-                            <p class="quiz__subtitle">Выберете один или несколько пунктов и нажмите «далее»     
-                            <div id="type-repair" class="step-quest">                      
-                                <div>                   
-                                    <label for="tovar5">
-                                        <input id="tovar5" value="2500p" onClick="sum()" type="checkbox" name="type-repair">
-                                        <img src="img/d1.svg" alt="icon">
-                                        <span class="input__desc-name">Прототип</span>
+                            <div class="slider__block">
+                                <div class="slider__item">
+                                    <div>   
+                                        <label for="step__null21" class="checkout another__bg hidden">
+                                            <input id="step__null21" type="radio" name="type-home1">
+                                                <img src="img/step1.svg" alt="1step">
+                                                <span class="input__desc-name">Поддержка мобильных платформ</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="slider__item">
+                                    <div >               
+                                        <label for="step__null22" class="checkout another__bg hidden">
+                                            <input id="step__null22" type="radio" name="type-home1" disabled>
+                                                <img src="img/2.svg" alt="2step">
+                                                <span class="input__desc-name">Количество экранов</span>
+                                        </label>
+                                    </div> 
+                                </div>   
+                                <div class="slider__item">          
+                                    <div >
+                                        <label for="step__null23" class="checkout another__bg">
+                                            <input id="step__null23" type="radio" name="type-home1" disabled>
+                                                <img src="img/3.svg" alt="2step">
+                                                <span class="input__desc-name">Дизайн</span>
+                                        </label>
+                                    </div>   
+                                </div> 
+                                <div class="slider__item">              
+                                    <div>
+                                        <label for="step__null24" class="another__bg hidden">
+                                            <input id="step__null24" type="radio" name="type-home1" disabled>
+                                                <img src="img/4.svg" alt="2step">
+                                                <span class="input__desc-name">Функционал</span>
+                                        </label>
+                                    </div>
+                                </div>      
+                                 <div class="slider__item">
+                                    <label for="step__null25" class="another__bg hidden">
+                                        <input id="step__null25" type="radio" name="type-home1" disabled>
+                                            <img src="img/prava.svg" alt="2step">
+                                            <span class="input__desc-name">Права пользования</span>
                                     </label>
                                 </div>     
-                                <div>   
-                                    <label for="tovar6">
-                                        <input id="tovar6" value="2500p" onClick="sum()" type="checkbox" name="type-repair">
-                                        <img src="img/d2.svg" alt="icon">
-                                        <span class="input__desc-name">Обычный</span>
+                                <div class="slider__item">
+                                    <label for="step__null26" class="another__bg hidden">
+                                        <input id="step__null26" type="radio" name="type-home1" disabled>
+                                            <img src="img/ser.svg" alt="2step">
+                                            <span class="input__desc-name">Сторонние сервисы</span>
                                     </label>
-                                </div>
-                                <div>   
-                                    <label for="tovar7">
-                                        <input id="tovar7" value="2500p" onClick="sum()" type="checkbox" name="type-repair">
-                                        <img src="img/d3.svg" alt="icon">
-                                        <span class="input__desc-name">Кастомный</span>
-                                    </label>
-                                </div>
-                            </div>               
-                            <div class="quiz_buttons">      
-                            <!--    <p><a class="btn back_btn" href="javascript:history.back()">Назад</a></p>-->
-                                 <p><a id="to_step4" class="btn">Далее</a></p>
-                            </div>               
-                        </div>
+                                </div> 
+                            </div>
+                        </div>  
+                        <p class="mobile__text subtitle">Выберете пункт и нажмите «далее»</p>                             
+                        <p class="quiz__subtitle">Выберете один или несколько пунктов и нажмите «далее»     
+                        <div id="type-repair" class="step-quest">                      
+                            <div data-tooltip="Уровень дизайна простейший,упор на функциональность и/или проверку гепотизы.">                   
+                                <label for="tovar5">
+                                    <input id="tovar5" value="2500p" onClick="sum()" type="checkbox" name="type-repair">
+                                    <img src="img/d1.svg" alt="icon">
+                                    <span class="input__desc-name">Прототип</span>
+                                </label>
+                            </div>     
+                            <div data-tooltip="Среднее по размеру приложение(большинство приложений, например, приложение такси).">   
+                                <label for="tovar6">
+                                    <input id="tovar6" value="2500p" onClick="sum()" type="checkbox" name="type-repair">
+                                    <img src="img/d2.svg" alt="icon">
+                                    <span class="input__desc-name">Обычный</span>
+                                </label>
+                            </div>
+                            <div data-tooltip="Среднее и большое по размеру приложение(в основном специфические приложения, например, медицинские приложения или приложения банков).">   
+                                <label for="tovar7">
+                                    <input id="tovar7" value="2500p" onClick="sum()" type="checkbox" name="type-repair">
+                                    <img src="img/d3.svg" alt="icon">
+                                    <span class="input__desc-name">Кастомный</span>
+                                </label>
+                            </div>
+                        </div>               
+                        <div class="quiz_buttons">      
+                        <p><a class="btn back_btn" href="javascript:history.back()">Назад</a></p>
+                             <p><a id="to_step4" class="btn">Далее</a></p>
+                        </div>               
                     </div>
+                </div>
 
 
 
@@ -319,95 +352,105 @@
                     <div class="mobile__text"><p class="mobile__text-text">Узнайте стоимость создания приложения, ответив на 6 простых вопросов!</p>Перед тем, как заказывать услугу, выберите в калькуляторе нужный функционал и набор опций. Меняя эти настройки, вы поймете от чего зависит итоговая цена приложения.</div>
                     
                  <div id="type-repair123" class="step-quest">
-                    <div>   
-                        <label for="step__null41" class="another__bg hidden">
-                            <input id="step__null41" type="radio" name="type-repair2" >
-                                <img src="img/step1.svg" alt="1step">
-                                <span class="input__desc-name">Поддержка мобильных платформ</span>
-                        </label>
-                    </div>
-                    <div>               
-                        <label for="step__null42" class="another__bg hidden">
-                            <input id="step__null42" type="radio" name="type-repair2">
-                                <img src="img/2.svg" alt="2step">
-                                <span class="input__desc-name">Количество экранов</span>
-                        </label>
-                    </div>              
-                    <div>
-                        <label for="step__null43" class="another__bg hidden">
-                            <input id="step__null43" type="radio" name="type-repair2">
-                                <img src="img/3.svg" alt="2step">
-                                <span class="input__desc-name">Дизайн</span>
-                        </label>
-                    </div>                  
-                    <div>
-                        <label for="step__null44" class="checkout another__bg">
-                            <input id="step__null44" type="radio" name="type-repair2">
-                                <img src="img/4.svg" alt="2step">
-                                <span class="input__desc-name">Функционал</span>
-                        </label>
-                    </div>      
-                     <div>
-                        <label for="step__null45" class="another__bg hidden">
-                            <input id="step__null45" type="radio" name="type-repair2">
-                                <img src="img/prava.svg" alt="2step">
-                                <span class="input__desc-name">Права пользования</span>
-                        </label>
-                    </div>     
-                     <div>
-                        <label for="step__null46" class="another__bg hidden">
-                            <input id="step__null46" type="radio" name="type-repair2">
-                                <img src="img/ser.svg" alt="2step">
-                                <span class="input__desc-name">Сторонние сервисы</span>
-                        </label>
-                    </div>                                
+                     <div class="slider__block">
+                            <div class="slider__item">
+                                <div>   
+                                    <label for="step__null31" class="checkout another__bg hidden">
+                                        <input id="step__null31" type="radio" name="type-home1">
+                                        <img src="img/step1.svg" alt="1step">
+                                        <span class="input__desc-name">Поддержка мобильных платформ</span>
+                                    </label>
+                                </div>
+                            </div>
+                                <div class="slider__item">
+                                    <div >               
+                                        <label for="step__null32" class="checkout another__bg hidden">
+                                            <input id="step__null32" type="radio" name="type-home1" disabled>
+                                                <img src="img/2.svg" alt="2step">
+                                                <span class="input__desc-name">Количество экранов</span>
+                                        </label>
+                                    </div> 
+                                </div>   
+                                <div class="slider__item">          
+                                    <div >
+                                        <label for="step__null33" class="checkout another__bg hidden">
+                                            <input id="step__null33" type="radio" name="type-home1" disabled>
+                                                <img src="img/3.svg" alt="2step">
+                                                <span class="input__desc-name">Дизайн</span>
+                                        </label>
+                                    </div>   
+                                </div> 
+                                <div class="slider__item">              
+                                    <div>
+                                        <label for="step__null34" class="checkout another__bg">
+                                            <input id="step__null34" type="radio" name="type-home1" disabled>
+                                                <img src="img/4.svg" alt="2step">
+                                                <span class="input__desc-name">Функционал</span>
+                                        </label>
+                                    </div>
+                                </div>      
+                                 <div class="slider__item">
+                                    <label for="step__null35" class="another__bg hidden">
+                                        <input id="step__null35" type="radio" name="type-home1" disabled>
+                                            <img src="img/prava.svg" alt="2step">
+                                            <span class="input__desc-name">Права пользования</span>
+                                    </label>
+                                </div>     
+                                 <div class="slider__item">
+                                    <label for="step__null36" class="another__bg hidden">
+                                        <input id="step__null36" type="radio" name="type-home1" disabled>
+                                            <img src="img/ser.svg" alt="2step">
+                                            <span class="input__desc-name">Сторонние сервисы</span>
+                                    </label>
+                                </div> 
+                            </div>                    
                     </div> 
                     <p class="mobile__text subtitle">Выберете пункт и нажмите «далее»</p>  
                     <p class="quiz__subtitle">Выберете один или несколько пунктов и нажмите «далее»</p>                           
                     <div id="type-repair2" class="step-quest">
-                        <div>                   
+                        <div data-tooltip="Переписка / чат между пользователями.">                   
                             <label for="tovar8">
                                 <input id="tovar8" value="100000p" onClick="sum()" type="checkbox" name="type-repair2">
                                 <img src="img/f1.svg" alt="icon">
                                 <span class="input__desc-name">Сообщения</span>
                             </label>
                         </div>
-                        <div>   
+                        <div data-tooltip="Загрузка аудио, фото и видео контента в приложении.">   
                             <label for="tovar9">
                                 <input id="tovar9" value="2500p" onClick="sum()" type="checkbox" name="type-repair2">
                                 <img src="img/f2.svg" alt="icon">
                                 <span class="input__desc-name">Медиа</span>
                             </label>
                         </div>
-                        <div>                   
+                        <div data-tooltip="Возможность поиска внутри приложения(текст, контент, пользователи).">                   
                             <label for="tovar10">
                                 <input id="tovar10" value="2500p" onClick="sum()" type="checkbox" name="type-repair2">
                                 <img src="img/f3.svg" alt="icon">
                                 <span class="input__desc-name">Поиск</span>
                             </label>
                         </div> 
-                        <div>   
+                        <div data-tooltip="Возможность работы с адресами / координатами и картами.">   
                             <label for="tovar11">
                                 <input id="tovar11" value="2500p" onClick="sum()" type="checkbox" name="type-repair2">
                                 <img src="img/f4.svg" alt="icon">
                                 <span class="input__desc-name">Локация карты</span>
                             </label>
                         </div>    
-                        <div>                   
+                        <div data-tooltip="Возможность доставки пользователям специальных сообщений(например, информация о начавшейся акции).">                   
                             <label for="tovar12">
                                 <input id="tovar12" value="2500p" onClick="sum()" type="checkbox" name="type-repair2">
                                 <img src="img/f5.svg" alt="icon">
                                 <span class="input__desc-name">Push - нотификация</span>
                             </label>
                         </div> 
-                        <div>   
+                        <div data-tooltip="Возможность оплатить банковской картой через приложение.">   
                             <label for="tovar13">
                                 <input id="tovar13" value="2500p" onClick="sum()" type="checkbox" name="type-repair2">
                                 <img src="img/f6.svg" alt="icon">
                                 <span class="input__desc-name">Онлайн оплата</span>
                             </label>
                         </div>
-                        <div>                   
+                        <div data-tooltip="История покупок, совершенных через приложение.">                   
                             <label for="tovar14">
                                 <input id="tovar14" value="2500p" onClick="sum()" type="checkbox" name="type-repair2">
                                 <img src="img/f7.svg" alt="icon">
@@ -416,7 +459,7 @@
                         </div>               
                     </div>          
                     <div class="quiz_buttons">      
-                     <!--   <p><a class="btn back_btn" href="javascript:history.back()">Назад</a></p>-->
+                        <p><a class="btn back_btn" href="javascript:history.back()">Назад</a></p>
                         <p><a id="to_step5" class="btn">Далее</a></p>
                     </div>             
                 </div>
@@ -434,74 +477,49 @@
                     <div class="mobile__text"><p class="mobile__text-text">Узнайте стоимость создания приложения, ответив на 6 простых вопросов!</p>Перед тем, как заказывать услугу, выберите в калькуляторе нужный функционал и набор опций. Меняя эти настройки, вы поймете от чего зависит итоговая цена приложения.</div>
                   
                     <div id="purchase1" class="step-quest">
-                        <div>   
-                            <label for="step__null51" class="another__bg hidden">
-                                <input id="step__null51" type="radio" name="purchase" >
-                                    <img src="img/step1.svg" alt="1step">
-                                    <span class="input__desc-name">Поддержка мобильных платформ</span>
-                            </label>
-                        </div>
-                        <div>               
-                            <label for="step__null52" class="another__bg hidden">
-                                <input id="step__null52" type="radio" name="purchase">
-                                    <img src="img/2.svg" alt="2step">
-                                    <span class="input__desc-name">Количество экранов</span>
-                            </label>
-                        </div>              
-                        <div>
-                            <label for="step__null53" class="another__bg hidden">
-                                <input id="step__null53" type="radio" name="purchase">
-                                    <img src="img/3.svg" alt="2step">
-                                    <span class="input__desc-name">Дизайн</span>
-                            </label>
-                        </div>                  
-                        <div>
-                            <label for="step__null54" class="another__bg hidden">
-                                <input id="step__null54" type="radio" name="purchase">
-                                    <img src="img/4.svg" alt="2step">
-                                    <span class="input__desc-name">Функционал</span>
-                            </label>
-                        </div>      
-                         <div>
-                            <label for="step__null55" class="checkout another__bg">
-                                <input id="step__null55" type="radio" name="purchase">
-                                    <img src="img/prava.svg" alt="2step">
-                                    <span class="input__desc-name">Права пользования</span>
-                            </label>
-                        </div>     
-                         <div>
-                            <label for="step__null56" class="another__bg hidden">
-                                <input id="step__null56" type="radio" name="purchase">
-                                    <img src="img/ser.svg" alt="2step">
-                                    <span class="input__desc-name">Сторонние сервисы</span>
-                            </label>
-                        </div>                                
-                    </div>   
+                         <div class="slider__block">
+                              
+                                 <div class="slider__item">
+                                    <label for="step__null41" class="checkout another__bg">
+                                        <input id="step__null41" type="radio" name="type-home1" disabled>
+                                            <img src="img/prava.svg" alt="2step">
+                                            <span class="input__desc-name">Права пользования</span>
+                                    </label>
+                                </div>     
+                                 <div class="slider__item">
+                                    <label for="step__null42" class="another__bg hidden">
+                                        <input id="step__null42" type="radio" name="type-home1" disabled>
+                                            <img src="img/ser.svg" alt="2step">
+                                            <span class="input__desc-name">Сторонние сервисы</span>
+                                    </label>
+                                </div> 
+                            </div>                    
+                    </div>
                     <p class="mobile__text subtitle">Выберете пункт и нажмите «далее»</p>
                     <p class="quiz__subtitle">Выберете один или несколько пунктов и нажмите «далее»                              
                     <div id="purchase" class="step-quest">
-                        <div>                             
+                        <div data-tooltip="Уровень дизайна простейший,упор на функциональность и/или проверку гепотизы.">                             
                             <label for="tovar15">
                                 <input id="tovar15" value="2500p" onClick="sum()" type="checkbox" name="purchase">
                                 <img src="img/prav1.svg" alt="icon">
                                 <span class="input__desc-name">Регистрация</span>
                             </label>
                         </div>
-                        <div>                                       
+                        <div data-tooltip="Среднее по размеру приложение(большинство приложений, например, приложение такси).">                                       
                             <label for="tovar16">
                                 <input id="tovar16" value="2500p" onClick="sum()" type="checkbox" name="purchase">
                                 <img src="img/prav2.svg" alt="icon">
                                 <span class="input__desc-name">Авторизация</span>
                             </label>
                         </div>
-                        <div>
+                        <div data-tooltip="Среднее и большое по размеру приложение(в основном специфические приложения, например, медицинские приложения или приложения банков).">
                             <label for="tovar17">
                                 <input id="tovar17" value="2500p" onClick="sum()" type="checkbox" name="purchase">
                                 <img src="img/prav3.svg" alt="icon">
                                 <span class="input__desc-name">Личный кабинет</span>
                             </label>
                         </div>     
-                        <div>
+                        <div data-tooltip="Возможность управления контентом приложения.">
                             <label for="tovar18">
                                 <input id="tovar18" value="10000p" onClick="sum()" type="checkbox" name="purchase">
                                 <img src="img/prav4.svg" alt="icon">
@@ -510,7 +528,7 @@
                         </div>                                  
                     </div>              
                     <div class="quiz_buttons">      
-                    <!--    <p><a class="btn back_btn" href="javascript:history.back()">Назад</a></p>-->
+                        <p><a class="btn back_btn" href="javascript:history.back()">Назад</a></p>
                         <p><a id="to_step6" class="btn">Далее</a></p>
                     </div>          
                 </div>
@@ -522,68 +540,42 @@
                     <h1 class="quiz__title">Рассчитайте стоимость услуги</h1>
                     <p class="quiz__text">Узнайте стоимость создания приложения, ответив на несколько простых вопросов! Перед тем, как заказывать услугу, выберите в калькуляторе нужный функционал и набор опций. Меняя эти настройки, вы поймете от чего зависит итоговая цена приложения.</p>
                     <div class="mobile__text"><p class="mobile__text-text">Узнайте стоимость создания приложения, ответив на 6 простых вопросов!</p>Перед тем, как заказывать услугу, выберите в калькуляторе нужный функционал и набор опций. Меняя эти настройки, вы поймете от чего зависит итоговая цена приложения.</div>
-                     <div id="repair-date1" class="step-quest">
-                        <div>   
-                            <label for="step__null61" class="another__bg hidden">
-                                <input id="step__null61" type="radio" name="repair-date" >
-                                    <img src="img/step1.svg" alt="1step">
-                                    <span class="input__desc-name">Поддержка мобильных платформ</span>
-                            </label>
-                        </div>
-                        <div>               
-                            <label for="step__null62" class="another__bg hidden">
-                                <input id="step__null62" type="radio" name="repair-date">
-                                    <img src="img/2.svg" alt="2step">
-                                    <span class="input__desc-name">Количество экранов</span>
-                            </label>
-                        </div>              
-                        <div>
-                            <label for="step__null63" class="another__bg hidden">
-                                <input id="step__null63" type="radio" name="repair-date">
-                                    <img src="img/3.svg" alt="2step">
-                                    <span class="input__desc-name">Дизайн</span>
-                            </label>
-                        </div>                  
-                        <div>
-                            <label for="step__null64" class="another__bg hidden">
-                                <input id="step__null64" type="radio" name="repair-date">
-                                    <img src="img/4.svg" alt="2step">
-                                    <span class="input__desc-name">Функционал</span>
-                            </label>
-                        </div>      
-                         <div>
-                            <label for="step__null65" class="another__bg hidden">
-                                <input id="step__null65" type="radio" name="repair-date">
-                                    <img src="img/prava.svg" alt="2step">
-                                    <span class="input__desc-name">Права пользования</span>
-                            </label>
-                        </div>     
-                         <div>
-                            <label for="step__null66" class="checkout another__bg">
-                                <input id="step__null66" type="radio" name="repair-date">
-                                    <img src="img/ser.svg" alt="2step">
-                                    <span class="input__desc-name">Сторонние сервисы</span>
-                            </label>
-                        </div>                                
-                    </div> 
+                    <div id="repair-date1" class="step-quest">
+                        <div class="slider__block">
+                            <div class="slider__item">
+                                <label for="step__null51" class="checkout another__bg hidden">
+                                    <input id="step__null51" type="radio" name="type-home1" disabled>
+                                        <img src="img/prava.svg" alt="2step">
+                                        <span class="input__desc-name">Права пользования</span>
+                                </label>
+                            </div>     
+                            <div class="slider__item">
+                                <label for="step__null52" class="checkout another__bg">
+                                    <input id="step__null52" type="radio" name="type-home1" disabled>
+                                        <img src="img/ser.svg" alt="2step">
+                                        <span class="input__desc-name">Сторонние сервисы</span>
+                                </label>
+                            </div> 
+                        </div>                    
+                    </div>
                      <p class="mobile__text subtitle">Выберете пункт и нажмите «далее»</p>  
                     <p class="quiz__subtitle">Выберете один или несколько пунктов и нажмите «далее»                              
                     <div id="repair-date" class="step-quest">           
-                        <div>                                   
+                        <div data-tooltip="Например, интеграция с погодной службой, для отображения погоды в вашем приложении.">                                   
                             <label for="tovar19">
                                 <input id="tovar19" value="60000p" onClick="sum()" type="radio" name="repair-date">
                                 <img src="img/ser1.svg" alt="icon">
                                 <span class="input__desc-name">Интеграция с одним или более сторонних сервисов</span>
                             </label>
                         </div>
-                        <div>                   
+                        <div data-tooltip="Если Вы планируете, что в будущем кто-то будет подключаться к Вашему решению для обмена данными.">                   
                             <label for="tovar20">
                                 <input id="tovar20" value="15500p" onClick="sum()" type="radio" name="repair-date">
                                 <img src="img/ser2.svg" alt="icon">
                                 <span class="input__desc-name">Создание API для интеграции с Вашим сервисом</span>
                             </label>
                         </div>
-                        <div>
+                        <div data-tooltip="Если где-то в процессе работы приложения нужна отправка смс сообщений.">
                             <label for="tovar21">
                                 <input id="tovar21" value="2000p" onClick="sum()"  type="radio" name="repair-date">
                                 <img src="img/ser3.svg" alt="icon">
@@ -592,37 +584,45 @@
                         </div>                              
                     </div>              
                     <div class="quiz_buttons">      
-                    <!--    <p><a class="btn back_btn" href="javascript:history.back()">Назад</a></p>-->
-                     <p><a id="to_step7" class="btn">Далее</a></p>
-                        <div class="quiz__about-text">
-                             <p class="quiz__about">Предварительная <br>стоимость вашего проекта:</p>
-                             <input type="text" name="res" size=1>
-                             <p class="inout__span">p</p>
-                        </div>       
-                     </div> 
-                    </div>        
-                 <div id="curr_step" class="center">Шаг 1 из 7</div>
+                        <p><a class="btn back_btn" href="javascript:history.back()">Назад</a></p>
+                        <p><a id="to_step7" class="btn">Далее</a></p>
+                            <div class="quiz__about-text">
+                                 <p class="quiz__about">Предварительная <br>стоимость вашего проекта:</p>
+                                 <input type="text" name="res" size=1>
+                                 <p class="inout__span">p</p>
+                            </div>       
+                    </div> 
+                </div>     
+            <div id="curr_step" class="center">Шаг 1 из 6</div>
+        
+         <div id="last_step" class="step">
+        
+            <h2>Оставьте свои данные<br>и мы предоставим расчёт полной стоимости проекта</h2>
+            
+            <div id="contact_fields" class="step-quest">
+                <div><input id="name_input" type="text" name="name_input" placeholder="Имя" required></div>
+                <div><input id="phone_input" type="tel" name="phone" placeholder="+7 999 888 7766" required></div>
+                <div><input id="email_input" type="email" name="email_input" placeholder="E-mail"></div>
             </div>
-            <div id="last_step" class="step">
-                <h2>Оставьте свои данные<br>и мы предоставим расчёт полной стоимости проекта</h2>
-                <div id="contact_fields" class="step-quest">
-                    <div><input id="name_input" type="text" name="name_input" placeholder="Имя"></div>
-                    <div><input id="phone_input" type="text" name="phone" placeholder="+7(___)_______"></div>
-                    <div><input id="email_input" type="text" name="email_input" placeholder="E-mail"></div>
-                </div>  
-                    
-                <div id="acceptance-line">
-                    <input id="acceptance" type="checkbox" name="acceptance" value="" checked>
-                    <label for="acceptance">Я ознакомлен(-а) с<a href="/privacy-policy/" target="_blank" class="acceptance__link">политикой конфиденциальности</a> ознакомлен</label>
-                </div> 
-                <p style="margin-bottom: 40px;"><a id="to_submit" class="btn">Узнать стоимость</a></p>        
-            </div>     
-        </form>
+            <div id="acceptance-line">
+                <input id="acceptance" type="checkbox" name="acceptance" value="" checked>
+                <label for="acceptance">Я ознакомлен(-а) <a href="politic.html" class="acceptance__link" target="_blank">Политикой конфиденциальности</a></label>
+            </div>              
+            <p><a id="to_submit" class="btn__submit">Узнать стоимость</a></p>
+            
+            
+                            
+        </div>
+                
+    </form>
+                
         <div id="progress_bar"><div id="progress_in"></div></div>
     </div>
+</div>
 </section>
     <section class="price__form" id="contact">
         <div class="contact__form-wrapper">
+            <h2 class="politic__hidden">Price</h2>
             <div class="wrapper contact__form-wrap">
                     <div class="politic__form-left">
                       <p class="politic__form-left-text hidden">Разработка мобильных приложений для iOS (iPhone, iPad), Andriod.
@@ -674,7 +674,7 @@
             </div>
         </div>
     </footer>
-    <footer class=" footer__block footer__mobile" id="footer">
+    <footer class=" footer__block footer__mobile" id="footer__mobile">
         <div class="wrapper">
             <div class="footer__contact">
                 <div class="contact__form-subtitle hidden">
@@ -704,6 +704,7 @@
     </footer>
     <script src="https://code-ya.jivosite.com/widget/Kuui5nBfQv" async></script>
     <script src="./js/jquery.js"></script>
+     <script src="./js/slick.js"></script>
     <script src="./js/qiuz.js"></script>
 </body>
 </html>

@@ -10,18 +10,18 @@ if (!isset ($_POST['uri'])) {
 
 $uri = isset($_POST['uri']) ? $_POST['uri'] : "";
 
-$type_home = isset($_POST['type-home']) ? $_POST['type-home'] : "";
-$area = isset($_POST['area']) ? $_POST['area'] : "";
+$type_home = isset($_POST['type-home1']) ? $_POST['type-home1'] : "";
+$type_home = isset($_POST['type-home2']) ? $_POST['type-home2'] : "";
 
 $type_repair = isset($_POST['type-repair']) ? $_POST['type-repair'] : "";
+$type_repair2 = isset($_POST['type-repair2']) ? $_POST['type-repair2'] : "";
 $type_repair_line = implode(', ', $type_repair);
-$design_project = isset($_POST['design-project']) ? $_POST['design-project'] : "";
 $purchase = isset($_POST['purchase']) ? $_POST['purchase'] : "";
 $purchase_line = implode(', ', $purchase);
 
 $repair_date = isset($_POST['repair-date']) ? $_POST['repair-date'] : "";
-$repair_price = isset($_POST['repair-price']) ? $_POST['repair-price'] : "";
-$price_input = isset($_POST['price_input']) ? $_POST['price_input'] : "";
+/*$repair_price = isset($_POST['repair-price']) ? $_POST['repair-price'] : "";
+$price_input = isset($_POST['price_input']) ? $_POST['price_input'] : "";*/
 
 $name = isset($_POST['name_input']) ? $_POST['name_input'] : "";
 $phone = isset($_POST['phone']) ? $_POST['phone'] : "";
@@ -29,14 +29,18 @@ $email_client = isset($_POST['email_input']) ? $_POST['email_input'] : "";
 
 // Отправка письма
  
-$address = "ulianna0309@gmail.com";
+$address = "adminwm@mail.ru";
 
 $mes = "Имя: $name\n
 Телефон: $phone\n
 E-mail: $email_client\n
 
-	Тип помещения: $type_home\n
-	Площадь: $area\n
+	Мобильные платформы: $type_home1\n
+	Колличество экранов: $type_home2\n
+	Дизайн: $type-repair\n
+	Функционал: $type-repair2\n
+	Права пользования: $purchase\n
+	Сторонние сервисы: $repair_date\n
 	
 	Вариант(ы) ремонта: $type_repair_line\n
 	Дизайн-проект (есть?): $design_project\n

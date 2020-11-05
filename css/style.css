@@ -1165,6 +1165,7 @@ body {
 }
 .contact__form-left{
   margin-right: 206px;
+  max-width: 447px;
 }
 .contact__form-phones__items{
   display: -webkit-box;
@@ -1229,7 +1230,7 @@ body {
 }
 .contact__form-right{
   padding-top: 131px;
-  width: 38%;
+ max-width: 426px;
 }
 .contact__form-text{
   font-size: 10px;
@@ -1595,6 +1596,10 @@ line-height: 24px;
 text-align: center;
 color: #FFFFFF;
 padding: 10px 58px 12px 58px;
+transition: 0.3s;
+}
+.price__btn-link:hover{
+  background: #159890;
 }
 .price__bottom{
   display: -webkit-box;
@@ -1619,6 +1624,9 @@ padding: 10px 58px 12px 58px;
   background-size: 100% 100%;
   position: relative;
   z-index: 0;
+}
+.acceptance-line{
+  color: rgba(44,27,59, 1);
 }
 
 
@@ -1696,6 +1704,9 @@ padding: 10px 58px 12px 58px;
   }
   .public__points {
     left: -20px;
+  }
+  .contact__form-left{
+    margin-right: 103px;
   }
 }
 @media  only screen and (max-width:992px){
@@ -1781,7 +1792,7 @@ padding: 10px 58px 12px 58px;
     padding: 43px 34px;
   }
   .contact__form-left{
-    margin-right: 70px;
+    margin-right: 20px;
   }
   .slider__block{
     max-width: 800px;
@@ -1803,9 +1814,9 @@ padding: 10px 58px 12px 58px;
   .price__last, .price__btn{
     width: 100%;
   }
-  .price{
+ /* .price{
     margin-bottom: 70px;
-  }
+  }*/
   .line{
     width: 100%;
   }
@@ -1941,12 +1952,13 @@ padding: 10px 58px 12px 58px;
     right: 28px;
   }
   .contact__form{
-    min-height: 1120px;
+    min-height: 1220px;
   }
   .contact__form-left{
     width: 100%;
     margin-right: 0;
     text-align: center;
+    margin: 0 auto;
   }
   .contact__form-right{
     width: 100%;
@@ -2227,6 +2239,9 @@ padding: 10px 58px 12px 58px;
       .politic__btn{
         padding: 21px 25px;
       }
+      .contact__form-connect .hidden{
+        display: none;
+      }
  
 }
 @media  only screen and (max-width:600px){
@@ -2269,6 +2284,7 @@ padding: 10px 58px 12px 58px;
   }
   .testim__text{
     font-size: 19px;
+    left: 13%;
   }
   .testim__photo{
     width: 76px;
@@ -2382,6 +2398,9 @@ padding: 10px 58px 12px 58px;
   .price__title{
     width: 100%;
   }
+  .politic__btn {
+    padding: 21px 15px;
+}
 }
 
 
