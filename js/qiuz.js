@@ -34,7 +34,7 @@ $(document).ready(function () {
 }());
 
 
-function sum()
+/*function sum()
 
 {
 
@@ -46,13 +46,12 @@ for(i=0;i<22;i++)
 
 document.form.res.value=k;
 
-}
+}*/
 
 
 
-var steps = [false, false, false, false, false, false, false, false];
-var curr_step = 1;
-
+var steps = [false, false, false, false, false, false, false ];
+var curr_step = 0;
 var int_val = 0; //для проверки площади
 
 
@@ -71,7 +70,7 @@ function set_history(index) {
 // переходы по шагам
 function to_step(index, need_push) {
     curr_step = index;
-    for (var i = 1; i < steps.length; i++) {
+    for (var i = 0; i < steps.length; i++) {
         if (!$("#step" + i).is(':hidden')) {
             $("#step" + i).hide();
         }
@@ -87,7 +86,7 @@ function to_step(index, need_push) {
             $("#other_steps").hide();
             $("#last_step").show();
         }
-    } else if (index > 1) { // если шаг больше ноля
+    } else if (index > 0) { // если шаг больше ноля
         if ($("#other_steps").is(':hidden')) { $("#other_steps").show(); }
         if (!$("#last_step").is(':hidden')) { $("#last_step").hide(); }
     } else if (!$("#other_steps").is(':hidden')) { // если шаг равен нолю
@@ -143,30 +142,30 @@ function validateEmail($email) {
 // Проверки полей по шагам и уведомления при незаполненных полях
 (function($) {
     
-    $(document).ready(function() { to_step(1, true); }); // задаем первоначальный индекс
+    $(document).ready(function() { to_step(0, true); }); // задаем первоначальный индекс
     
     /*$("#to_step1").click(function(event) {
         event.preventDefault();
         to_step(1, true);
     });*/
 
-    $("#to_step2").click(function(event) {
+    $("#to_step1").click(function(event) {
         event.preventDefault();
         if (check_radio_selected("type-home1", "Укажите платформу")) {
+            to_step(1, true);
+        }
+    });
+    $("#to_step2").click(function(event) {
+        event.preventDefault();
+         if (check_radio_selected("type-home2", "Укажите количество экранов")) {
             to_step(2, true);
         }
     });
+
     $("#to_step3").click(function(event) {
         event.preventDefault();
-         if (check_radio_selected("type-home2", "Укажите количество экранов")) {
-            to_step(3, true);
-        }
-    });
-
-    $("#to_step4").click(function(event) {
-        event.preventDefault();
          if (check_radio_selected("type-repair", "Укажите дизайн")) {
-            to_step(4, true);
+            to_step(3, true);
         }
     });
        
@@ -187,16 +186,16 @@ function validateEmail($email) {
         
     });*/
 
-    $("#to_step5").click(function(event) {
+    $("#to_step4").click(function(event) {
         event.preventDefault();
         if (check_radio_selected("type-repair2", "Укажите функционал")) {
-            to_step(5, true);
+            to_step(4, true);
         }
     });
-    $("#to_step6").click(function(event) {
+    $("#to_step5").click(function(event) {
         event.preventDefault();
         if (check_radio_selected("purchase", "Укажите права пользования")) {
-            to_step(6, true);
+            to_step(5, true);
         }
     });
 
@@ -213,10 +212,10 @@ function validateEmail($email) {
         
     });*/
 
-   $("#to_step7").click(function(event) {
+   $("#to_step6").click(function(event) {
         event.preventDefault();
         if (check_radio_selected("repair-date", "Укажите сторонние сервисы")) {
-            to_step(7, true);
+            to_step(6, true);
         }
     });
 
