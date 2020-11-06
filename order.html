@@ -31,8 +31,13 @@
                     >Услуги</a
                   >
                 </li>
-                <li class="header__item">
-                  <a href="#portfolio" class="header__item-link js-scroll"
+                <li class="header__item hidden">
+                  <a href="index.html#portfolio" class="header__item-link js-scroll"
+                    >Портфолио</a
+                  >
+                </li>
+                 <li class="header__item visible">
+                  <a href="index.html#portfolio__mobile" class="header__item-link js-scroll"
                     >Портфолио</a
                   >
                 </li>
@@ -51,7 +56,7 @@
               <span class="header-navigation__btn-row"></span>
               <span class="header-navigation__btn-row"></span>
             </div>
-            <a href="#contact" class="btn header-btn js-scroll hidden__hidden"
+            <a href="#contact" class="btn header-btn js-scroll"
               >Запросить оценку проекта</a
             >
           </div>
@@ -191,8 +196,8 @@
                       <input
                         id="tovar0"
                         value="25000"
-                        onClick="sum()"
-                        type="radio"
+                       
+                        type="checkbox"
                         name="type-home1"
                         class="calc"
                       />
@@ -207,8 +212,8 @@
                       <input
                         id="tovar1"
                         value="30000"
-                        onClick="sum()"
-                        type="radio"
+                        
+                        type="checkbox"
                         name="type-home1"
                         class="calc"
                       />
@@ -226,7 +231,7 @@
                       type="text"
                       class="sum"
                       name="sum"
-                      size="1"
+                      
                       value="0"
                     />
                     <p class="inout__span">p</p>
@@ -240,7 +245,7 @@
                       type="text"
                       class="sum"
                       name="sum"
-                      size="1"
+                      
                       value="0"
                     />
                     <p class="inout__span">p</p>
@@ -380,7 +385,7 @@
                           id="tovar2"
                           value="1500"
                           onClick="sum()"
-                          type="radio"
+                          type="checkbox"
                           name="type-home2"
                           class="calc"
                         />
@@ -398,7 +403,7 @@
                           id="tovar3"
                           value="40000"
                           onClick="sum()"
-                          type="radio"
+                          type="checkbox"
                           name="type-home2"
                           class="calc"
                         />
@@ -416,7 +421,7 @@
                           id="tovar4"
                           value="2500"
                           onClick="sum()"
-                          type="radio"
+                          type="checkbox"
                           name="type-home2"
                           class="calc"
                         />
@@ -437,7 +442,7 @@
                       <p class="quiz__about">
                         Предварительная <br />стоимость вашего проекта:
                       </p>
-                      <input type="text" name="sum" size="1" />
+                      <input type="text" name="sum" class="sum" />
                       <p class="inout__span">p</p>
                     </div>
                     <p><a id="to_step2" class="btn">Далее</a></p>
@@ -509,7 +514,7 @@
                           >
                             <input
                               id="step__null23"
-                              type="radio"
+                              type="checkbox"
                               name="type-home1"
                               disabled
                             />
@@ -523,7 +528,7 @@
                           <label for="step__null24" class="another__bg hidden">
                             <input
                               id="step__null24"
-                              type="radio"
+                              type="checkbox"
                               name="type-home1"
                               disabled
                             />
@@ -536,7 +541,7 @@
                         <label for="step__null25" class="another__bg hidden">
                           <input
                             id="step__null25"
-                            type="radio"
+                            type="checkbox"
                             name="type-home1"
                             disabled
                           />
@@ -550,7 +555,7 @@
                         <label for="step__null26" class="another__bg hidden">
                           <input
                             id="step__null26"
-                            type="radio"
+                            type="checkbox"
                             name="type-home1"
                             disabled
                           />
@@ -628,7 +633,7 @@
                       <p class="quiz__about">
                         Предварительная <br />стоимость вашего проекта:
                       </p>
-                      <input type="text" name="sum" size="1" />
+                      <input type="text" name="sum" class="sum" />
                       <p class="inout__span">p</p>
                     </div>
                     <p><a id="to_step3" class="btn">Далее</a></p>
@@ -879,7 +884,7 @@
                     <p class="quiz__about">
                       Предварительная <br />стоимость вашего проекта:
                     </p>
-                    <input type="text" name="sum" size="1" />
+                    <input type="text" name="sum" class="sum" />
                     <p class="inout__span">p</p>
                   </div>
                   <p><a id="to_step4" class="btn">Далее</a></p>
@@ -1015,7 +1020,7 @@
                     <p class="quiz__about">
                       Предварительная <br />стоимость вашего проекта:
                     </p>
-                    <input type="text" name="sum" size="1" />
+                    <input type="text" name="sum" class="sum" />
                     <p class="inout__span">p</p>
                   </div>
                   <p><a id="to_step5" class="btn">Далее</a></p>
@@ -1086,7 +1091,7 @@
                         id="tovar19"
                         value="60000"
                         onClick="sum()"
-                        type="radio"
+                        type="checkbox"
                         name="repair-date"
                         class="calc"
                       />
@@ -1104,7 +1109,7 @@
                         id="tovar20"
                         value="15500"
                         onClick="sum()"
-                        type="radio"
+                        type="checkbox"
                         name="repair-date"
                         class="calc"
                       />
@@ -1122,7 +1127,7 @@
                         id="tovar21"
                         value="2000"
                         onClick="sum()"
-                        type="radio"
+                        type="checkbox"
                         name="repair-date"
                         class="calc"
                       />
@@ -1141,7 +1146,7 @@
                     <p class="quiz__about">
                       Предварительная <br />стоимость вашего проекта:
                     </p>
-                    <input type="text" name="sum" size="1" />
+                    <input type="text" name="sum" class="sum" />
                     <p class="inout__span">p</p>
                   </div>
                   <p><a id="to_step6" class="btn">Далее</a></p>

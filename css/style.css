@@ -2312,6 +2312,12 @@ body {
   }
 }
 @media only screen and (max-width: 565px) {
+   .work {
+    height: 312px;
+  }
+  .work__subtitle{
+    text-align: center;
+  }
   .intro__right {
     margin-top: 30px;
   }

@@ -1,4 +1,5 @@
 
+
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
@@ -1049,7 +1050,6 @@ body {
 .slick-initialized .slick-slide {
   outline: none;
 }
-
 [data-tooltip] {
   position: relative; /* Относительное позиционирование */
 }
@@ -1057,8 +1057,8 @@ body {
   content: attr(data-tooltip); /* Выводим текст */
   position: absolute; /* Абсолютное позиционирование */
   width: 250px; /* Ширина подсказки */
-  left: 0px;
-  top: 0px; /* Положение подсказки */
+  left: 20px;
+  top: -10px; /* Положение подсказки */
   background: rgba(51, 50, 48, 0.95); /* Синий цвет фона */
   color: #fff; /* Цвет текста */
   padding: 0.5em; /* Поля вокруг текста */
@@ -1071,7 +1071,7 @@ body {
   transition: 1s; /* Время появления подсказки */
   border-radius: 5px;
   z-index: 10000;
-  font-size: 8px;
+  font-size: 12px;
   line-height: 10px;
   height: 50px;
 }
@@ -1083,6 +1083,7 @@ body {
 }
 .sum {
   text-align: right;
+  max-width: 170px;
 }
 
 /*footer*/
@@ -1477,6 +1478,9 @@ input[type="text"],
 }
 
 @media only screen and (max-width: 768px) {
+  [data-tooltip]::after{
+    left: 0;
+  }
   h2 {
     font-size: 20px;
   }
@@ -1699,8 +1703,9 @@ input[type="text"],
   #type-home > *,
   #type-repair > * {
     text-align: center;
-    width: 51%;
+    width: 270px;
     margin-bottom: 5px;
+    margin-right:10px;
   }
   .quiz__about-text {
     display: -webkit-box;
@@ -1724,9 +1729,10 @@ input[type="text"],
   #type-home1 > *,
   #type-home > *,
   #type-repair > * {
-    width: 80%;
+    width: 270px;
   }
 }
+
 
 @media only screen and (max-width: 320px) {
   .header__logo-name {
@@ -1737,14 +1743,5 @@ input[type="text"],
   }
   .wrapper {
     width: 96%;
-  }
-  #repair-date > *,
-  #purchase > *,
-  #type-repair2 > *,
-  #type-home2 > *,
-  #type-home1 > *,
-  #type-home > *,
-  #type-repair > * {
-    width: 101%;
   }
 }
