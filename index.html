@@ -1,438 +1,649 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SBS</title>
-    <meta name="description" content="">
-    <link rel="stylesheet" href="./css/slick.css">
-    <link rel="stylesheet" href="./css/slick-theme.css">
-    <link rel="stylesheet" href="./css/style.css">
-</head>
-<body>
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="./css/slick.css" />
+    <link rel="stylesheet" href="./css/slick-theme.css" />
+    <link rel="stylesheet" href="./css/style.min.css" />
+  </head>
+  <body>
     <header class="header" id="header">
-        <div class="wrapper">
-            <div class="header__wrapper">
-                <div class="header__logo">
-                    <a href="/" class="header_logo-link">
-                        <img src="./img/logo.svg" alt="SBS-logo" class="class header_logo-pic" />
-                        <span class="header__logo-name">Small Business Software</span>
-                    </a>
-                </div>
-                <nav class="header__nav">
-                    <ul class="header__list">
-                        <li class="header__item">
-                            <a href="price.html" class="header__item-link js-scroll">Услуги</a></li>
-                        <li class="header__item hidden">
-                            <a href="#portfolio" class="header__item-link js-scroll">Портфолио</a>
-                        </li>
-                        <li class="header__item visible">
-                            <a href="#portfolio__mobile" class="header__item-link js-scroll">Портфолио</a>
-                        </li>
-                        <li class="header__item">
-                            <a href="#contact" class="header__item-link js-scroll">Контакты</a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="header-navigation__btn">
-                    <span class="header-navigation__btn-row"></span>
-                    <span class="header-navigation__btn-row"></span>
-                    <span class="header-navigation__btn-row"></span>
-                    <span class="header-navigation__btn-row"></span>
-                    <span class="header-navigation__btn-row"></span>
-                    <span class="header-navigation__btn-row"></span>
-                </div>
-                <a href="#contact" class="btn header-btn js-scroll">Запросить оценку проекта</a>
-            </div>
+      <div class="wrapper">
+        <div class="header__wrapper">
+          <div class="header__logo">
+            <a href="/" class="header_logo-link">
+              <img
+                src="./img/logo.svg"
+                alt="SBS-logo"
+                class="class header_logo-pic"
+              />
+              <span class="header__logo-name">Small Business Software</span>
+            </a>
+          </div>
+          <nav class="header__nav">
+            <ul class="header__list">
+              <li class="header__item">
+                <a href="price.html" class="header__item-link js-scroll"
+                  >Услуги</a
+                >
+              </li>
+              <li class="header__item hidden">
+                <a href="#portfolio" class="header__item-link js-scroll"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="header__item visible">
+                <a href="#portfolio__mobile" class="header__item-link js-scroll"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="header__item">
+                <a href="#contact" class="header__item-link js-scroll"
+                  >Контакты</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <div class="header-navigation__btn">
+            <span class="header-navigation__btn-row"></span>
+            <span class="header-navigation__btn-row"></span>
+            <span class="header-navigation__btn-row"></span>
+            <span class="header-navigation__btn-row"></span>
+            <span class="header-navigation__btn-row"></span>
+            <span class="header-navigation__btn-row"></span>
+          </div>
+          <a href="#contact" class="btn header-btn js-scroll"
+            >Запросить оценку проекта</a
+          >
         </div>
+      </div>
     </header>
     <main class="main">
-        <section class="intro" id="intro">
-            <div class="intro__wrapper">
-                <div class="wrapper intro__wrap">
-                    <div class="intro__left">
-                        <h1 class="intro__title">Разработка мобильных приложений</h1>
-                        <span class="intro__subtitle">Создаем для Вас отличное программное обеспечение </span>
-                    </div>
-                    <div class="intro__right">
-                        <img class="intro__right-img" src="img/phone.svg" alt="phone">
-                    </div>
-                </div>
+      <section class="intro" id="intro">
+        <div class="intro__wrapper">
+          <div class="wrapper intro__wrap">
+            <div class="intro__left">
+              <h1 class="intro__title">Разработка мобильных приложений</h1>
+              <span class="intro__subtitle"
+                >Создаем для Вас отличное программное обеспечение
+              </span>
             </div>
-        </section>
-        <a href="#contact" class="btn__mobile">Запросить оценку проекта</a>
-        <section class="about">
-            <a href="#contact" class="mvp__btn btn__about js-scroll">
-                <img src="img/btn.svg" alt="btn-up">
-            </a>
-            <div class="wrapper about__wrap">
-                <div class="about__ios">
-                    <img src="img/ios.svg" alt="ios" class="about__ios-img">
-                    <div class="about__text">
-                        <h3 class="about__text-title">iOS Apps</h3>
-                        <p class="about__text-text">Чтобы занять лидирующие позиции в AppStore, вашему приложению нужен
-                            отличный UX и UI. Также
-                            приложение должно быть быстрым и отзывчивым. Мы используем Objective C и Swift в наших
-                            приложениях для iOS, что делает их быстрыми и надежными.</p>
-                    </div>
-                </div>
-                <div class="about__android">
-                    <img src="img/android.svg" alt="android" class="about__android-img">
-                    <div class="about__text">
-                        <h3 class="about__text-title">Android Apps</h3>
-                        <p class="about__text-text">Используя Java и Kotlin, мы создаем быстрые и надежные приложения
-                            для Android. Но есть
-                            случаи, когда мы используем C ++ и Android NDK.</p>
-                    </div>
-                </div>
+            <div class="intro__right">
+              <img class="intro__right-img" src="img/phone.svg" alt="phone" />
             </div>
-        </section>
-        <section class="mvp">
-            <a href="#footer" class="mvp__btn mvp__mobile js-scroll">
-                <img src="img/btn.svg" alt="btn-up">
-            </a>
-            <div class="wrapper">
-                <div class="mvp__top">
-                    <img src="img/lamp.svg" alt="idea" class="mvp__top-img">
-                    <div class="mvp__top-text">
-                        <h3 class="mvp__top-title">MVP</h3>
-                        <p class="mvp__top-subtitle">Иногда у вас есть идея, но вы не уверены, что она сработает.<br>
-                            В этом случае лучше создать приложение с базовой функциональностью и базовым дизайном,<br>
-                            чтобы проверить свою идею.</p>
-                    </div>
-                    <a href="#contact" class="about-btn js-scroll">Получить консультацию</a>
-                </div>
-                <div class="mvp__bottom">
-                    <h2 class="mvp__bottom-title">Гибкая команда для вашего успеха</h2>
-                    <h3 class="mvp__bottom-subtitle">Преимущества, которые мы даем каждому нашему проекту</h3>
-                    <div class="mvp__bottom-items">
-                        <div class="mvp__bottom-item">
-                            <span class="mvp__bottom-item__title">Опыт</span>
-                            <p class="mvp__bottom-item__text">Наша команда имеет большой опыт создания проектов.</p>
-                        </div>
-                        <div class="mvp__bottom-item">
-                            <span class="mvp__bottom-item__title">Документация</span>
-                            <p class="mvp__bottom-item__text">Каждый создаваемый нами проект имеет простую и понятную
-                                документацию, которая упрощает сопровождение проекта</p>
-                        </div>
-                        <div class="mvp__bottom-item">
-                            <span class="mvp__bottom-item__title">Доступность</span>
-                            <p class="mvp__bottom-item__text">Мы доступны 24/7! В любой момент вы можете проверить
-                                статус проекта и узнать все, что хотите!</p>
-                        </div>
-                        <div class="mvp__bottom-item">
-                            <span class="mvp__bottom-item__title">Поддержка</span>
-                            <p class="mvp__bottom-item__text">Чтобы пользователи были довольны, мы можем добавить в ваше
-                                приложение небольшие функции, работать с отзывами в магазине и запустить маркетинговую
-                                компанию.</p>
-                        </div>
-                        <div class="mvp__bottom-item">
-                            <span class="mvp__bottom-item__title">Пожизненная гарантия</span>
-                            <p class="mvp__bottom-item__text">Мы настолько уверены в своей работе, что даем пожизненную
-                                гарантию на все наши проекты! Даже через 10 лет вы обнаружите ошибку в нашем приложении,
-                                мы исправим ее бесплатно!</p>
-                        </div>
-                        <div class="mvp__bottom-item">
-                            <span class="mvp__bottom-item__title">Конфиденциальность</span>
-                            <p class="mvp__bottom-item__text">Если вашему проекту нужна дополнительная
-                            конфиденциальность, мы можем подписать NDA (Соглашение о неразглашении), которое
-                            гарантирует безопасность вашего проекта.</p>
-                        </div>
-                    </div>
-                </div>
+          </div>
+        </div>
+      </section>
+      <a href="#contact" class="btn__mobile">Запросить оценку проекта</a>
+      <section class="about">
+        <a href="#contact" class="mvp__btn btn__about js-scroll">
+          <img src="img/btn.svg" alt="btn-up" />
+        </a>
+        <div class="wrapper about__wrap">
+          <div class="about__ios">
+            <img src="img/ios.svg" alt="ios" class="about__ios-img" />
+            <div class="about__text">
+              <h3 class="about__text-title">iOS Apps</h3>
+              <p class="about__text-text">
+                Чтобы занять лидирующие позиции в AppStore, вашему приложению
+                нужен отличный UX и UI. Также приложение должно быть быстрым и
+                отзывчивым. Мы используем Objective C и Swift в наших
+                приложениях для iOS, что делает их быстрыми и надежными.
+              </p>
             </div>
-        </section>
-        <section class="price" id="price">
-            <div class="price__sale">
-                <img src="img/sale.svg" alt="sale" class="price__img">
-                <p class="price__sale-text">Получите скидку 10%<br>
-                    на Ваш проект! <a href="#" class="price__sale-link">подробнее... </a>
+          </div>
+          <div class="about__android">
+            <img
+              src="img/android.svg"
+              alt="android"
+              class="about__android-img"
+            />
+            <div class="about__text">
+              <h3 class="about__text-title">Android Apps</h3>
+              <p class="about__text-text">
+                Используя Java и Kotlin, мы создаем быстрые и надежные
+                приложения для Android. Но есть случаи, когда мы используем C ++
+                и Android NDK.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="mvp">
+        <a href="#footer" class="mvp__btn mvp__mobile js-scroll">
+          <img src="img/btn.svg" alt="btn-up" />
+        </a>
+        <div class="wrapper">
+          <div class="mvp__top">
+            <img src="img/lamp.svg" alt="idea" class="mvp__top-img" />
+            <div class="mvp__top-text">
+              <h3 class="mvp__top-title">MVP</h3>
+              <p class="mvp__top-subtitle">
+                Иногда у вас есть идея, но вы не уверены, что она сработает.<br />
+                В этом случае лучше создать приложение с базовой
+                функциональностью и базовым дизайном,<br />
+                чтобы проверить свою идею.
+              </p>
+            </div>
+            <a href="#contact" class="about-btn js-scroll"
+              >Получить консультацию</a
+            >
+          </div>
+          <div class="mvp__bottom">
+            <h2 class="mvp__bottom-title">Гибкая команда для вашего успеха</h2>
+            <h3 class="mvp__bottom-subtitle">
+              Преимущества, которые мы даем каждому нашему проекту
+            </h3>
+            <div class="mvp__bottom-items">
+              <div class="mvp__bottom-item">
+                <span class="mvp__bottom-item__title">Опыт</span>
+                <p class="mvp__bottom-item__text">
+                  Наша команда имеет большой опыт создания проектов.
                 </p>
+              </div>
+              <div class="mvp__bottom-item">
+                <span class="mvp__bottom-item__title">Документация</span>
+                <p class="mvp__bottom-item__text">
+                  Каждый создаваемый нами проект имеет простую и понятную
+                  документацию, которая упрощает сопровождение проекта
+                </p>
+              </div>
+              <div class="mvp__bottom-item">
+                <span class="mvp__bottom-item__title">Доступность</span>
+                <p class="mvp__bottom-item__text">
+                  Мы доступны 24/7! В любой момент вы можете проверить статус
+                  проекта и узнать все, что хотите!
+                </p>
+              </div>
+              <div class="mvp__bottom-item">
+                <span class="mvp__bottom-item__title">Поддержка</span>
+                <p class="mvp__bottom-item__text">
+                  Чтобы пользователи были довольны, мы можем добавить в ваше
+                  приложение небольшие функции, работать с отзывами в магазине и
+                  запустить маркетинговую компанию.
+                </p>
+              </div>
+              <div class="mvp__bottom-item">
+                <span class="mvp__bottom-item__title"
+                  >Пожизненная гарантия</span
+                >
+                <p class="mvp__bottom-item__text">
+                  Мы настолько уверены в своей работе, что даем пожизненную
+                  гарантию на все наши проекты! Даже через 10 лет вы обнаружите
+                  ошибку в нашем приложении, мы исправим ее бесплатно!
+                </p>
+              </div>
+              <div class="mvp__bottom-item">
+                <span class="mvp__bottom-item__title">Конфиденциальность</span>
+                <p class="mvp__bottom-item__text">
+                  Если вашему проекту нужна дополнительная конфиденциальность,
+                  мы можем подписать NDA (Соглашение о неразглашении), которое
+                  гарантирует безопасность вашего проекта.
+                </p>
+              </div>
             </div>
-            <div class="price__sale-mobile">
-                <img src="img/price__mob.svg" alt="sale" class="price__img">
-                <div class="price__sale-text__mobile price__sale-text">
-                    <p class=" price__sale-text__mobile">Получите скидку 10%<br>
-                        на Ваш проект!</p>
-                    <div class="price__sale-link__wrap">
-                        <a href="#" class="price__sale-link">подробнее... </a>
-                    </div>
-                </div>
+          </div>
+        </div>
+      </section>
+      <section class="price" id="price">
+        <div class="price__sale">
+          <img src="img/sale.svg" alt="sale" class="price__img" />
+          <p class="price__sale-text">
+            Получите скидку 10%<br />
+            на Ваш проект!
+            <a href="#" class="price__sale-link">подробнее... </a>
+          </p>
+        </div>
+        <div class="price__sale-mobile">
+          <img src="img/price__mob.svg" alt="sale" class="price__img" />
+          <div class="price__sale-text__mobile price__sale-text">
+            <p class="price__sale-text__mobile">
+              Получите скидку 10%<br />
+              на Ваш проект!
+            </p>
+            <div class="price__sale-link__wrap">
+              <a href="#" class="price__sale-link">подробнее... </a>
             </div>
-            <div class="wrapper">
-                <div class="price__wrapper">
-                    <div class="price__text">
-                        <h1 class="price__title">Сколько стоит разработка?</h1>
-                        <div class="price__title-link">
-                            <a href="order.html" class="btn__price">Рассчитать стоимость</a>
-                        </div>
-                    </div>
-                </div>
+          </div>
+        </div>
+        <div class="wrapper">
+          <div class="price__wrapper">
+            <div class="price__text">
+              <h1 class="price__title">Сколько стоит разработка?</h1>
+              <div class="price__title-link">
+                <a href="order.html" class="btn__price">Рассчитать стоимость</a>
+              </div>
             </div>
-        </section>
-        <section class="work">
-            <div class="wrapper">
-                <div class="work__text">
-                    <h2 class="work__title">Наши избранные работы</h2>
-                    <h3 class="work__subtitle">Каждый наш проект - произведение искусства</h3>
-                </div>
+          </div>
+        </div>
+      </section>
+      <section class="work">
+        <div class="wrapper">
+          <div class="work__text">
+            <h2 class="work__title">Наши избранные работы</h2>
+            <h3 class="work__subtitle">
+              Каждый наш проект - произведение искусства
+            </h3>
+          </div>
+        </div>
+      </section>
+      <section class="slider__mobile" id="portfolio__mobile">
+        <div class="wrapper">
+          <div class="slider__mobile-wrap">
+            <h4 class="slider__content-title">
+              <strong>HolidayBook</strong> - это праздник, который создаёшь ты
+              сам.
+            </h4>
+            <div class="slider__content-img">
+              <img
+                src="img/iphone.jpg"
+                alt="iphone"
+                class="slider__content-img-img"
+              />
+              <div class="slider__content-btn">
+                <a href="https://apps.apple.com/ru/app/holidaybook/id1503060412"
+                  ><img src="img/AppStore.svg" alt="app store"
+                /></a>
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.holidaybook.holidaybook"
+                  ><img src="img/GP.svg" alt="google play"
+                /></a>
+              </div>
             </div>
-        </section>
-        <section class="slider__mobile" id="portfolio__mobile">
-            <div class="wrapper">
-                <div class="slider__mobile-wrap">
-                     <h4 class="slider__content-title"><strong>HolidayBook</strong> - это праздник, который создаёшь ты сам.
-                    </h4>
-                    <div class="slider__content-img">
-                        <img src="img/iphone.jpg" alt="iphone" class="slider__content-img-img">
-                        <div class="slider__content-btn">
-                            <a href="https://apps.apple.com/ru/app/holidaybook/id1503060412"><img src="img/AppStore.svg" alt="app store"></a>
-                            <a href="https://play.google.com/store/apps/details?id=com.holidaybook.holidaybook"><img src="img/GP.svg" alt="google play"></a>
-                        </div>
-                    </div>
-                    <div class="slider__content">
-                        <p class="slider__content-text">День рождения, юбилей, свадьба, мальчишник, девичник,
-                            корпоратив, а может просто пятница, решать тебе.<br>
-                            Размещай бесплатно в ленте свои мероприятия, а мы поможем тебе найти профессионалов - от
-                            фотографа до жонглера, от организатора мероприятия до диджея любого праздника. <a href="#" class="slider__mobile-link">подробнее...</a>
-                        </p>
-                        <a href="#intro" class="slider__btn js-scroll">Мне нужно что-то подобное</a>
-                    </div>
-                </div>
-                <div class="slider__mobile-wrap">
-                     <h4 class="slider__content-title"><strong>Tadly</strong> - Создавайте свои собственные чаты.
-                    </h4>
-                    <div class="slider__content-img">
-                        <img src="img/tadly.jpg" alt="iphone" class="slider__content-img-img">
-                        <div class="slider__content-btn">
-                            <a href="https://play.google.com/store/apps/details?id=com.holidaybook.holidaybook"><img src="img/GP.svg" alt="google play"></a>
-                        </div>
-                    </div>
-                    <div class="slider__content">
-                        <p class="slider__content-text">День рождения, юбилей, свадьба, мальчишник, девичник,
-                            корпоратив, а может просто пятница, решать тебе.<br>
-                            Размещай бесплатно в ленте свои мероприятия, а мы поможем тебе найти профессионалов - от
-                            фотографа до жонглера, от организатора мероприятия до диджея любого праздника. <a href="#" class="slider__mobile-link">подробнее...</a></p>
-                        <a href="#intro" class="btn slider__btn js-scroll">Мне нужно что-то подобное</a>
-                    </div>
-                </div>
+            <div class="slider__content">
+              <p class="slider__content-text">
+                День рождения, юбилей, свадьба, мальчишник, девичник,
+                корпоратив, а может просто пятница, решать тебе.<br />
+                Размещай бесплатно в ленте свои мероприятия, а мы поможем тебе
+                найти профессионалов - от фотографа до жонглера, от организатора
+                мероприятия до диджея любого праздника.
+                <a href="#" class="slider__mobile-link">подробнее...</a>
+              </p>
+              <a href="#intro" class="slider__btn js-scroll"
+                >Мне нужно что-то подобное</a
+              >
             </div>
-        </section>
-        <section class="slider" id="portfolio">
-            <div class="slider__block">
-                <div class="slider__items">
-                    <div class="slider__content-img">
-                        <img src="img/iphone.jpg" alt="iphone" class="slider__content-img-img">
-                        <div class="slider__content-btn">
-                            <a href="https://apps.apple.com/ru/app/holidaybook/id1503060412" target="_blank"><img src="img/AppStore.svg" alt="app store"></a>
-                            <a href="https://play.google.com/store/apps/details?id=com.holidaybook.holidaybook" target="_blank"><img src="img/GP.svg" alt="google play"></a>
-                        </div>
-                    </div>
-                    <div class="slider__content">
-                        <h4 class="slider__content-title">HolidayBook - это праздник, который создаёшь ты сам.
-                        </h4>
-                        <p class="slider__content-text">День рождения, юбилей, свадьба, мальчишник, девичник,
-                            корпоратив, а может просто пятница, решать тебе.<br>
-                            Размещай бесплатно в ленте свои мероприятия, а мы поможем тебе найти профессионалов - от
-                            фотографа до жонглера, от организатора мероприятия до диджея любого праздника.<br>
-                            Спланируй и организуй веселую и шумную вечеринку, и расскажи о ней всем. Общайся в общих и
-                            личных чатах со своими друзьями. Добавляй гостей, желаемые подарки.<br>
-                            Если ты ведущий, диджей, музыкант или просто талантливый человек в организации праздников-
-                            размести свои услуги, пусть о тебе узнают все!</p>
-                        <a href="#intro" class="btn slider__btn js-scroll">Мне нужно что-то подобное</a>
-                    </div>
-                </div>
-                <div class="slider__items second__slider">
-                    <div class="slider__content-img">
-                        <img src="img/tadly.jpg" alt="tadly" class="slider__content-img-img">
-                        <div class="slider__content-btn">
-                            <a href="https://play.google.com/store/apps/details?id=com.holidaybook.holidaybook" target="_blank">
-                                <img src="img/GP.svg" alt="google play">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="slider__content">
-                        <h4 class="slider__content-title">Tadly - Создавайте свои собственные чаты.
-                        </h4>
-                        <p class="slider__content-text">Начните общаться с незнакомыми Вам людьми здесь и сейчас! Не
-                            нужно знать каких-либо контактных данных других людей для начала общения.
-                            Создавайте свои собственные чаты для общения в местах где Вы чаще всего бываете. Получайте
-                            любую информацию в незнакомых местах! Просто войдите в созданный чат и начните общение с
-                            теми, кто бывает там чаще чем Вы.<br>
-                            Если Вы оказались в незнакомом месте и требуется помощь, просто создайте чат Tadly SOS и
-                            все, кто будет рядом с Вами получат Push уведомление и помогут Вам.</p>
-                        <a href="#intro" class="btn slider__btn js-scroll">Мне нужно что-то подобное</a>
-                    </div>
-                </div>
+          </div>
+          <div class="slider__mobile-wrap">
+            <h4 class="slider__content-title">
+              <strong>Tadly</strong> - Создавайте свои собственные чаты.
+            </h4>
+            <div class="slider__content-img">
+              <img
+                src="img/tadly.jpg"
+                alt="iphone"
+                class="slider__content-img-img"
+              />
+              <div class="slider__content-btn">
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.holidaybook.holidaybook"
+                  ><img src="img/GP.svg" alt="google play"
+                /></a>
+              </div>
             </div>
-        </section>
-        <section class="stages">
-            <div class="wrapper">
-                <div class="stages__text">
-                    <h2 class="stages__title">Этапы работы</h2>
-                </div>
+            <div class="slider__content">
+              <p class="slider__content-text">
+                День рождения, юбилей, свадьба, мальчишник, девичник,
+                корпоратив, а может просто пятница, решать тебе.<br />
+                Размещай бесплатно в ленте свои мероприятия, а мы поможем тебе
+                найти профессионалов - от фотографа до жонглера, от организатора
+                мероприятия до диджея любого праздника.
+                <a href="#" class="slider__mobile-link">подробнее...</a>
+              </p>
+              <a href="#intro" class="btn slider__btn js-scroll"
+                >Мне нужно что-то подобное</a
+              >
             </div>
-        </section>
-        <section class="idea">
-            <div class="wrapper">
-                <h2 class="idea__title">Idea</h2>
-                <div class="idea__wrapper">
-                    <div class="idea__left">
-                        <div class="idea__item">
-                            <p class="idea__idea idea__text">Идея</p>
-                            <img src="img/ball.svg" alt="ball" class="idea__ball">
-                            <img src="img/one-down.svg" alt="arrow" class="idea__down">
-                            <img src="img/points.svg" alt="points" class="idea__points">
-                        </div>
-                        <div class="analitic__item">
-                            <p class="idea__idea idea__text">Аналитика</p>
-                            <img src="img/2down.svg" alt="analitic__arrow" class="analitic__down">
-                            <img src="img/3down.svg" alt="analitic__arrow2" class="analitic__push">
-                        </div>
-                        <div class="design__item">
-                            <p class="idea__idea idea__text">Проектирование и дизайн</p>
-                            <img src="img/cube.svg" alt="cube" class="design__cube">
-                            <img src="img/Down.svg" alt="Down" class="design__down">
-                            <img src="img/cube2.svg" alt="cube2" class="design__cube2">
-                        </div>
-                        <div class="develop__item">
-                            <p class="idea__idea idea__text">Разработка</p>
-                            <img src="img/V.svg" alt="V" class="develop__v">
-                            <img src="img/4down.svg" alt="down" class="develop__down">
-                        </div>
-                        <div class="testing__item">
-                            <p class="idea__idea idea__text">Тестирование</p>
-                            <img src="img/5down.svg" alt="down" class="testing__down">
-                            <img src="img/bounds.svg" alt="bounds" class="testing__bounds">
-                        </div>
-                        <div class="public__item">
-                            <p class="idea__idea idea__text">Публикация</p>
-                            <img src="img/2cube.svg" alt="2cube" class="public__cube">
-                            <img src="img/2points.svg" alt="2points" class="public__points">
-                            <img src="img/6down.svg" alt="down" class="public__down">
-                        </div>
-                        <div class="last__item">
-                            <p class="idea__idea idea__text">Поддержка и развитие</p>
-                        </div>
-                    </div>
-                    <div class="idea__right">
-                        <div class="idea__btn">Готовим продукт к публикации в магазинах</div>
-                        <div class="idea__btn">Делаем скриншоты и привлекательные картинки</div>
-                        <div class="idea__btn">Создаём описание, иконки, баннеры, видео</div>
-                        <div class="idea__btn">Подбираем ключевые слова для AppStore/Google Play</div>
-                        <div class="idea__btn">Если требуется, создаем для Вашей компании аккаунты в
-                            AppStore/Google Play</div>
-                        <div class="idea__btn">Помогаем с публикацией приложений</div>
-                        <div class="idea__right-up">
-                            <a href="#intro" class="js-scroll"><img src="img/Up.svg" alt="up"></a>
-                        </div>
-                    </div>
-                </div>
+          </div>
+        </div>
+      </section>
+      <section class="slider" id="portfolio">
+        <div class="slider__block">
+          <div class="slider__items">
+            <div class="slider__content-img">
+              <img
+                src="img/iphone.jpg"
+                alt="iphone"
+                class="slider__content-img-img"
+              />
+              <div class="slider__content-btn">
+                <a
+                  href="https://apps.apple.com/ru/app/holidaybook/id1503060412"
+                  target="_blank"
+                  ><img src="img/AppStore.svg" alt="app store"
+                /></a>
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.holidaybook.holidaybook"
+                  target="_blank"
+                  ><img src="img/GP.svg" alt="google play"
+                /></a>
+              </div>
             </div>
-        </section>
-        <section class="contact__form" id="contact">
-            <div class="contact__form-wrapper">
-                <div class="wrapper contact__form-wrap">
-                    <div class="testim__item">
-                        <p class="testim__text">Остались вопросы?</p>
-                        <img src="img/testim.svg" alt="testimonials" class="testim__testim">
-                        <img src="img/photo.svg" alt="photo" class="testim__photo">
-                    </div>
-                    <div class="contact__form-left">
-                        <h2 class="contact__form-title">Давайте вместе создадим<br> что-то грандиозное!</h2>
-                        <form action="mail.php" method="POST">
-                            <label for="first_name" class="form__name">Ваше имя</label>
-                            <input id="first_name" type="text" class="form__input" name="name1" required>
-                            <label for="last__email" class="form__name">Ваш email</label>
-                            <input id="last__email" type="email" class="form__input" name="email1" required>
-                            <div id="acceptance-line" class="acceptance-line">
-                                <input id="acceptance" type="checkbox" name="acceptance" value="" required>
-                                <label for="acceptance">Я ознакомлен(-а) с <a href="politic.html" target="_blank" class="acceptance__link">политикой конфиденциальности</a> ознакомлен</label>
-                            </div> 
-                            <input type="submit" class="form__btn" name="sub" value="Оставить заявку">
-                        </form>
-                    </div>
-                    <div class="contact__form-right">
-                        <p class="contact__form-text">Разработка мобильных приложений для iOS (iPhone, iPad), Andriod.
-                            Создание мобильных
-                            приложений на заказ и продажа готовых продуктов. Разработка сайтов и Web приложений.
-                            Контроль качества на всех этапах.
-                        </p>
-                        <span class="contact__form-subtitle">Контактная информация:</span>
-                        <div class="contact__form-connect">
-                            <div class="contact__form-phones">
-                                <div class="contact__form-phones__items">
-                                    <img src="img/call.svg" alt="call">
-                                    <span class="contact__form-connect__name">Телефон:</span>
-                                </div>
-                                <a href="tel:+7(921) 421-41-84" class="contact__form-connect__phone">+7(921)
-                                    421-41-84</a>
-                                <a href="tel:+7(911) 833-67-68" class="contact__form-connect__phone">+7(911)
-                                    833-67-68</a>
-                            </div>
-                            <div class="contact__form-connect__email">
-                                <div class="contact__form-phones__items">
-                                    <img src="img/email.svg" alt="email">
-                                    <span class="contact__form-connect__name">Email:</span>
-                                </div>
-                                <a href="mailto:info@sbsoftware.ru"
-                                    class="contact__form-connect__em" target="_blank">info@sbsoftware.ru
-                                </a>
-                                <a href="https://t.me/SmallBusinessSoftware" target="_blank">
-                                    <img src="img/tg.svg" alt="telegram">
-                                </a>
-                            </div>
-                        </div>
-                        <a href="politic.html" class="contact__form-politic" target="_blank">Политика конфиденциальности</a>
-                    </div>
-                </div>
+            <div class="slider__content">
+              <h4 class="slider__content-title">
+                HolidayBook - это праздник, который создаёшь ты сам.
+              </h4>
+              <p class="slider__content-text">
+                День рождения, юбилей, свадьба, мальчишник, девичник,
+                корпоратив, а может просто пятница, решать тебе.<br />
+                Размещай бесплатно в ленте свои мероприятия, а мы поможем тебе
+                найти профессионалов - от фотографа до жонглера, от организатора
+                мероприятия до диджея любого праздника.<br />
+                Спланируй и организуй веселую и шумную вечеринку, и расскажи о
+                ней всем. Общайся в общих и личных чатах со своими друзьями.
+                Добавляй гостей, желаемые подарки.<br />
+                Если ты ведущий, диджей, музыкант или просто талантливый человек
+                в организации праздников- размести свои услуги, пусть о тебе
+                узнают все!
+              </p>
+              <a href="#intro" class="btn slider__btn js-scroll"
+                >Мне нужно что-то подобное</a
+              >
             </div>
-        </section>
+          </div>
+          <div class="slider__items second__slider">
+            <div class="slider__content-img">
+              <img
+                src="img/tadly.jpg"
+                alt="tadly"
+                class="slider__content-img-img"
+              />
+              <div class="slider__content-btn">
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.holidaybook.holidaybook"
+                  target="_blank"
+                >
+                  <img src="img/GP.svg" alt="google play" />
+                </a>
+              </div>
+            </div>
+            <div class="slider__content">
+              <h4 class="slider__content-title">
+                Tadly - Создавайте свои собственные чаты.
+              </h4>
+              <p class="slider__content-text">
+                Начните общаться с незнакомыми Вам людьми здесь и сейчас! Не
+                нужно знать каких-либо контактных данных других людей для начала
+                общения. Создавайте свои собственные чаты для общения в местах
+                где Вы чаще всего бываете. Получайте любую информацию в
+                незнакомых местах! Просто войдите в созданный чат и начните
+                общение с теми, кто бывает там чаще чем Вы.<br />
+                Если Вы оказались в незнакомом месте и требуется помощь, просто
+                создайте чат Tadly SOS и все, кто будет рядом с Вами получат
+                Push уведомление и помогут Вам.
+              </p>
+              <a href="#intro" class="btn slider__btn js-scroll"
+                >Мне нужно что-то подобное</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="stages">
+        <div class="wrapper">
+          <div class="stages__text">
+            <h2 class="stages__title">Этапы работы</h2>
+          </div>
+        </div>
+      </section>
+      <section class="idea">
+        <div class="wrapper">
+          <h2 class="idea__title">Idea</h2>
+          <div class="idea__wrapper">
+            <div class="idea__left">
+              <div class="idea__item">
+                <p class="idea__idea idea__text">Идея</p>
+                <img src="img/ball.svg" alt="ball" class="idea__ball" />
+                <img src="img/one-down.svg" alt="arrow" class="idea__down" />
+                <img src="img/points.svg" alt="points" class="idea__points" />
+              </div>
+              <div class="analitic__item">
+                <p class="idea__idea idea__text">Аналитика</p>
+                <img
+                  src="img/2down.svg"
+                  alt="analitic__arrow"
+                  class="analitic__down"
+                />
+                <img
+                  src="img/3down.svg"
+                  alt="analitic__arrow2"
+                  class="analitic__push"
+                />
+              </div>
+              <div class="design__item">
+                <p class="idea__idea idea__text">Проектирование и дизайн</p>
+                <img src="img/cube.svg" alt="cube" class="design__cube" />
+                <img src="img/Down.svg" alt="Down" class="design__down" />
+                <img src="img/cube2.svg" alt="cube2" class="design__cube2" />
+              </div>
+              <div class="develop__item">
+                <p class="idea__idea idea__text">Разработка</p>
+                <img src="img/V.svg" alt="V" class="develop__v" />
+                <img src="img/4down.svg" alt="down" class="develop__down" />
+              </div>
+              <div class="testing__item">
+                <p class="idea__idea idea__text">Тестирование</p>
+                <img src="img/5down.svg" alt="down" class="testing__down" />
+                <img
+                  src="img/bounds.svg"
+                  alt="bounds"
+                  class="testing__bounds"
+                />
+              </div>
+              <div class="public__item">
+                <p class="idea__idea idea__text">Публикация</p>
+                <img src="img/2cube.svg" alt="2cube" class="public__cube" />
+                <img
+                  src="img/2points.svg"
+                  alt="2points"
+                  class="public__points"
+                />
+                <img src="img/6down.svg" alt="down" class="public__down" />
+              </div>
+              <div class="last__item">
+                <p class="idea__idea idea__text">Поддержка и развитие</p>
+              </div>
+            </div>
+            <div class="idea__right">
+              <div class="idea__btn">
+                Готовим продукт к публикации в магазинах
+              </div>
+              <div class="idea__btn">
+                Делаем скриншоты и привлекательные картинки
+              </div>
+              <div class="idea__btn">
+                Создаём описание, иконки, баннеры, видео
+              </div>
+              <div class="idea__btn">
+                Подбираем ключевые слова для AppStore/Google Play
+              </div>
+              <div class="idea__btn">
+                Если требуется, создаем для Вашей компании аккаунты в
+                AppStore/Google Play
+              </div>
+              <div class="idea__btn">Помогаем с публикацией приложений</div>
+              <div class="idea__right-up">
+                <a href="#intro" class="js-scroll"
+                  ><img src="img/Up.svg" alt="up"
+                /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="contact__form" id="contact">
+        <div class="contact__form-wrapper">
+          <div class="wrapper contact__form-wrap">
+            <div class="testim__item">
+              <p class="testim__text">Остались вопросы?</p>
+              <img
+                src="img/testim.svg"
+                alt="testimonials"
+                class="testim__testim"
+              />
+              <img src="img/photo.svg" alt="photo" class="testim__photo" />
+            </div>
+            <div class="contact__form-left">
+              <h2 class="contact__form-title">
+                Давайте вместе создадим<br />
+                что-то грандиозное!
+              </h2>
+              <form action="mail.php" method="POST">
+                <label for="first_name" class="form__name">Ваше имя</label>
+                <input
+                  id="first_name"
+                  type="text"
+                  class="form__input"
+                  name="name1"
+                  required
+                />
+                <label for="last__email" class="form__name">Ваш email</label>
+                <input
+                  id="last__email"
+                  type="email"
+                  class="form__input"
+                  name="email1"
+                  required
+                />
+                <div id="acceptance-line" class="acceptance-line">
+                  <input
+                    id="acceptance"
+                    type="checkbox"
+                    name="acceptance"
+                    value=""
+                    required
+                  />
+                  <label for="acceptance"
+                    >Я ознакомлен(-а) с
+                    <a
+                      href="politic.html"
+                      target="_blank"
+                      class="acceptance__link"
+                      >политикой конфиденциальности</a
+                    >
+                    ознакомлен</label
+                  >
+                </div>
+                <input
+                  type="submit"
+                  class="form__btn"
+                  name="sub"
+                  value="Оставить заявку"
+                />
+              </form>
+            </div>
+            <div class="contact__form-right">
+              <p class="contact__form-text">
+                Разработка мобильных приложений для iOS (iPhone, iPad), Andriod.
+                Создание мобильных приложений на заказ и продажа готовых
+                продуктов. Разработка сайтов и Web приложений. Контроль качества
+                на всех этапах.
+              </p>
+              <span class="contact__form-subtitle">Контактная информация:</span>
+              <div class="contact__form-connect">
+                <div class="contact__form-phones">
+                  <div class="contact__form-phones__items">
+                    <img src="img/call.svg" alt="call" />
+                    <span class="contact__form-connect__name">Телефон:</span>
+                  </div>
+                  <a
+                    href="tel:+7(921) 421-41-84"
+                    class="contact__form-connect__phone"
+                    >+7(921) 421-41-84</a
+                  >
+                  <a
+                    href="tel:+7(911) 833-67-68"
+                    class="contact__form-connect__phone"
+                    >+7(911) 833-67-68</a
+                  >
+                </div>
+                <div class="contact__form-connect__email">
+                  <div class="contact__form-phones__items">
+                    <img src="img/email.svg" alt="email" />
+                    <span class="contact__form-connect__name">Email:</span>
+                  </div>
+                  <a
+                    href="mailto:info@sbsoftware.ru"
+                    class="contact__form-connect__em"
+                    target="_blank"
+                    >info@sbsoftware.ru
+                  </a>
+                  <a href="https://t.me/SmallBusinessSoftware" target="_blank">
+                    <img src="img/tg.svg" alt="telegram" />
+                  </a>
+                </div>
+              </div>
+              <a
+                href="politic.html"
+                class="contact__form-politic"
+                target="_blank"
+                >Политика конфиденциальности</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="footer" id="footer">
-        <div class="wrapper">
-            <div class="footer__wrapper">
-                <span class="footer__text">© 2020 Small Business Software. Все права защищены</span>
-            </div>
+      <div class="wrapper">
+        <div class="footer__wrapper">
+          <span class="footer__text"
+            >© 2020 Small Business Software. Все права защищены</span
+          >
         </div>
+      </div>
     </footer>
-   
-    <footer class=" footer footer__mobile" id="footer__mobile">
-        <div class="wrapper">
-            <div class="footer__contact">
-                <div class="contact__form-subtitle">
-                    <span class="">Контактная информация:</span>
-                </div>
-                <div class="footer__phone">
-                    <div class="footer__phone-item">
-                        <img src="img/call.svg" alt="call">
-                        <span class="contact__form-connect__name">Телефон:</span>
-                    </div>
-                    <a href="tel:+7(921) 421-41-84" class="contact__form-connect__phone">+7(921)
-                        421-41-84</a>
-                    <a href="tel:+7(911) 833-67-68" class="contact__form-connect__phone">+7(911)
-                        833-67-68</a>
-                </div>
-                <div class="footer__phone-item">
-                     <img src="img/email.svg" alt="email">
-                    <span class="contact__form-connect__name">Email:</span>
-                    <a href="mailto:info@sbsoftware.ru" class="contact__form-connect__em">info@sbsoftware.ru</a>
-                    <a href="https://t.me/SmallBusinessSoftware" target="_blank"><img src="img/tg.svg" alt="telegram"></a>
-                </div>
+
+    <footer class="footer footer__mobile" id="footer__mobile">
+      <div class="wrapper">
+        <div class="footer__contact">
+          <div class="contact__form-subtitle">
+            <span class="">Контактная информация:</span>
+          </div>
+          <div class="footer__phone">
+            <div class="footer__phone-item">
+              <img src="img/call.svg" alt="call" />
+              <span class="contact__form-connect__name">Телефон:</span>
             </div>
-            <div class="footer__bottom">
-                <span>© 2020 Small Business Software. Все права защищены.<a href="politic.html" class="contact__form-politic"> Политика конфиденциальности</a></span>
-            </div>
+            <a href="tel:+7(921) 421-41-84" class="contact__form-connect__phone"
+              >+7(921) 421-41-84</a
+            >
+            <a href="tel:+7(911) 833-67-68" class="contact__form-connect__phone"
+              >+7(911) 833-67-68</a
+            >
+          </div>
+          <div class="footer__phone-item">
+            <img src="img/email.svg" alt="email" />
+            <span class="contact__form-connect__name">Email:</span>
+            <a
+              href="mailto:info@sbsoftware.ru"
+              class="contact__form-connect__em"
+              >info@sbsoftware.ru</a
+            >
+            <a href="https://t.me/SmallBusinessSoftware" target="_blank"
+              ><img src="img/tg.svg" alt="telegram"
+            /></a>
+          </div>
         </div>
+        <div class="footer__bottom">
+          <span
+            >© 2020 Small Business Software. Все права защищены.<a
+              href="politic.html"
+              class="contact__form-politic"
+            >
+              Политика конфиденциальности</a
+            ></span
+          >
+        </div>
+      </div>
     </footer>
-   <script src="https://code-ya.jivosite.com/widget/Kuui5nBfQv" async></script>
+    <script src="https://code-ya.jivosite.com/widget/Kuui5nBfQv" async></script>
     <script src="./js/jquery.js"></script>
     <script src="./js/slick.js"></script>
     <script src="./js/main.js"></script>
-    
-
-
-</body>
-
+  </body>
 </html>

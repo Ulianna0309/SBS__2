@@ -34,19 +34,25 @@ $(document).ready(function () {
 }());
 
 
-function sum()
-
+/*function sum()
 {
-
 k=0;
-
 for(i=0;i<22;i++)
-
 {if(document.getElementById('tovar'+i).checked) k+=parseInt(document.getElementById('tovar'+i).value);}
-
 document.form.res.value=k;
-
+}*/
+function calcscore(){
+    var score = 0;
+    $(".calc:checked").each(function(){
+        score+=parseInt($(this).val(),10);
+    });
+    $("input[name=sum]").val(score)
 }
+$().ready(function(){
+    $(".calc").change(function(){
+        calcscore()
+    });
+});
 
 
 
@@ -168,23 +174,6 @@ function validateEmail($email) {
             to_step(3, true);
         }
     });
-       
-
-   /* $("#to_step4").click(function(event) {
-        event.preventDefault();
-        
-        var checked = $("#type-repair input:checked").length > 0;
-        if (!checked){
-            alert("Укажите какой ремонт необходим");
-            return false;
-        } else {
-            to_step(4, true);
-        }
-        
-        /*if (check_radio_selected("type-repair", "Укажите какой ремонт необходим"))    {
-            to_step(4, true);
-        
-    });*/
 
     $("#to_step4").click(function(event) {
         event.preventDefault();
@@ -199,43 +188,12 @@ function validateEmail($email) {
         }
     });
 
-    /*$("#to_step6").click(function(event) {
-        event.preventDefault();
-        
-        var checked = $("#purchase input:checked").length > 0;
-        if (!checked){
-            alert("Укажите нужна ли вам помощь в закупке материалов");
-            return false;
-        } else {
-            to_step(6, true);
-        }
-        
-    });*/
-
    $("#to_step6").click(function(event) {
         event.preventDefault();
         if (check_radio_selected("repair-date", "Укажите сторонние сервисы")) {
             to_step(6, true);
         }
     });
-
-  /* $("#to_step8").click(function(event) {
-        event.preventDefault();
-        if (check_radio_selected("repair-price", "Укажите в какой бюджет вы хотите уложиться")) {
-            
-            if ($('#repair-price_5_input').is(':checked')) {
-                if (($('#price_input').val().length > 0)) {
-                    to_step(8, true);
-                } else {
-                    alert('Укажите свой бюджет в который вы хотите уложится');
-                    return false;
-                }
-            } else {
-                to_step(8, true);
-            }
-        }
-    });*/
-
 
     // Отправка формы (нажатием на финальную кнопку)
     $("#to_submit").click(function(event) {
