@@ -1,4 +1,3 @@
-
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
@@ -980,9 +979,6 @@ body {
   text-align: center;
   color: #ffffff;
 }
-#type-home1 {
-  overflow-y: hidden;
-}
 .mobile__text {
   display: none;
 }
@@ -1049,40 +1045,55 @@ body {
 .slick-initialized .slick-slide {
   outline: none;
 }
+div#type-home1 img,
+div#type-home img,
+div#type-home2 img,
+div#type-repair img,
+div#type-repair2 img,
+div#purchase img,
+div#repair-date img {
+    margin-right: 0;
+}
 [data-tooltip] {
   position: relative; /* Относительное позиционирование */
 }
 [data-tooltip]::after {
-  content: attr(data-tooltip); /* Выводим текст */
-  position: absolute; /* Абсолютное позиционирование */
-  width: 250px; /* Ширина подсказки */
-  left: 20px;
-  top: -10px; /* Положение подсказки */
-  background: rgba(51, 50, 48, 0.95); /* Синий цвет фона */
-  color: #fff; /* Цвет текста */
-  padding: 0.5em; /* Поля вокруг текста */
-  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Параметры тени */
-  /*pointer-events: none; /* Подсказка */
-  opacity: 0; /* Подсказка невидима */
-  -webkit-transition: 1s;
-  -o-transition: 1s;
-  transition: 1s; /* Время появления подсказки */
-  border-radius: 5px;
-  z-index: 10000;
-  font-size: 12px;
-  line-height: 10px;
-  height: 50px;
+    content: attr(data-tooltip);
+    position: absolute;
+    width: 258px;
+    left: 15px;
+    top: -10px;
+    background: rgba(51,50,48,.95);
+    color: #fff;
+    padding: .5em;
+    -webkit-box-shadow: 2px 2px 5px rgba(0,0,0,.3);
+    box-shadow: 2px 2px 5px rgba(0,0,0,.3);
+    opacity: 0;
+    -webkit-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+    border-radius: 9px;
+    z-index: 10000;
+    font-size: 12px;
+    line-height: 10px;
+    height: 50px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
 }
 [data-tooltip]:hover::after {
-  opacity: 1; /* Показываем подсказку */
-  top: 2em; /* Положение подсказки */
-  z-index: 10000;
-  background: rgba(51, 50, 48, 0.95);
+    opacity: 1;
+    top: -68px;
+    z-index: 10000;
+    background: rgba(51,50,48,.95);
 }
+
 .sum {
   text-align: right;
-  max-width: 170px;
+  max-width: 145px;
 }
 
 /*footer*/
@@ -1251,7 +1262,7 @@ body {
 }
 input[type="text"],
 .inout__span {
-  font-size: 48px;
+  font-size: 30px;
   font-weight: 900px;
   border: none;
   font-family: Roboto;
@@ -1477,9 +1488,8 @@ input[type="text"],
 }
 
 @media only screen and (max-width: 768px) {
-   .step-quest{
-    margin-left: 0;
-  }
+
+   
   [data-tooltip]::after{
     left: 0;
   }
@@ -1640,6 +1650,7 @@ input[type="text"],
   }
   #quiz .btn {
     margin-bottom: 69px;
+    margin-left: -15px;
   }
   .politic__close {
     display: block;
@@ -1745,5 +1756,8 @@ input[type="text"],
   }
   .wrapper {
     width: 96%;
+  }
+  .quiz__about{
+    letter-spacing: 0;
   }
 }
