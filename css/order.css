@@ -1,5 +1,4 @@
 
-
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
@@ -1478,6 +1477,9 @@ input[type="text"],
 }
 
 @media only screen and (max-width: 768px) {
+   .step-quest{
+    margin-left: 0;
+  }
   [data-tooltip]::after{
     left: 0;
   }
