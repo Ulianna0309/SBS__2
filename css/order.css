@@ -622,7 +622,7 @@ body {
   width: 270px;
 }
 #quiz .btn:hover {
-  background: #4195e8;
+  background: #159890;
 }
 
 #quiz .btn.back_btn {
@@ -1046,7 +1046,6 @@ body {
   outline: none;
 }
 div#type-home1 img,
-div#type-home img,
 div#type-home2 img,
 div#type-repair img,
 div#type-repair2 img,
@@ -1495,9 +1494,6 @@ input[type="text"],
   }
   h2 {
     font-size: 20px;
-  }
-  .step-quest > * img {
-    margin-right: 0;
   }
   .step-quest > * {
     padding-left: 0;
