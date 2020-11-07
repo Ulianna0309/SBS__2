@@ -107,7 +107,7 @@ function set_history(index) {
     }
     if (steps[index] == false) {
         history.pushState({'step_x': index}, null, window.location.href);
-        steps[index] = true;
+        steps[index] = false;
     }
 }
 
