@@ -1092,7 +1092,19 @@ div#repair-date img {
 
 .sum {
   text-align: right;
-  max-width: 145px;
+  max-width: 170px;
+  font-weight: 700 !important;
+}
+.inout__span {
+  font-size: 30px;
+  font-weight: 900px;
+  border: none;
+  font-family: Roboto;
+  font-size: 48px;
+  line-height: 56px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #333230;
 }
 
 /*footer*/
@@ -1259,15 +1271,14 @@ div#repair-date img {
 .politic__hidden {
   display: none;
 }
-input[type="text"],
-.inout__span {
+input[type="text"] {
   font-size: 30px;
   font-weight: 900px;
   border: none;
   font-family: Roboto;
   font-size: 48px;
   line-height: 56px;
-  font-weight: 700;
+  font-weight: normal;
   letter-spacing: 1.5px;
   color: #333230;
 }
@@ -1755,5 +1766,7 @@ input[type="text"],
   }
   .quiz__about{
     letter-spacing: 0;
+    font-size: 10px;
+    line-height: 10px;
   }
 }
