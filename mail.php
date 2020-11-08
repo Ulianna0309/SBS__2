@@ -46,8 +46,7 @@ function adopt($text) {
 
 $headers = "MIME-Version: 1.0" . PHP_EOL .
 "Content-Type: text/html; charset=utf-8" . PHP_EOL .
-'From: '.'Вам оставили заявку на консультацию' .
 'From: '.adopt($project_name).' <'.$admin_email.'>' . PHP_EOL .
 'Reply-To: '.$admin_email.'' . PHP_EOL;
 
-mail($admin_email, adopt($form_subject), $message, $headers );
+mail($project_name, $admin_email, adopt($form_subject), $message, $headers );

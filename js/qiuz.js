@@ -326,7 +326,7 @@ $(document).ready(function() {
         var th = $(this);
         $.ajax({
             type: "POST",
-            url: "send.php", //Change
+            url: "quiz.php", //Change
             data: th.serialize()
         }).done(function() {
             alert("Спасибо!Мы с вами свяжемся в ближайшее время!");
