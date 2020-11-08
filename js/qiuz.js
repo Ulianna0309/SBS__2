@@ -243,9 +243,9 @@ function validateEmail($email) {
     // Проверка телефона и ПК при отправке формы
     $('#quiz_form').submit(function () {
         
-        var name = $.trim($(this).find('input[name="name_input"]').val());
+        var name = $.trim($(this).find('input[name="name"]').val());
         var phone = $.trim($(this).find('input[name="phone"]').val());
-        var email = $.trim($(this).find('input[name="email_input"]').val());
+        var email = $.trim($(this).find('input[name="email"]').val());
         
         if (name  === '') {
             alert('Заполните поле с именем');
