@@ -196,40 +196,40 @@ function validateEmail($email) {
 
     $("#to_step1").click(function(event) {
         event.preventDefault();
-        if (check_radio_selected("type-home1", "Укажите платформу")) {
+        if (check_radio_selected("platform", "Укажите платформу")) {
             to_step(1, true);
         }
     });
     $("#to_step2").click(function(event) {
         event.preventDefault();
-         if (check_radio_selected("type-home2", "Укажите количество экранов")) {
+         if (check_radio_selected("number-of-screens", "Укажите количество экранов")) {
             to_step(2, true);
         }
     });
 
     $("#to_step3").click(function(event) {
         event.preventDefault();
-         if (check_radio_selected("type-repair", "Укажите дизайн")) {
+         if (check_radio_selected("design", "Укажите дизайн")) {
             to_step(3, true);
         }
     });
 
     $("#to_step4").click(function(event) {
         event.preventDefault();
-        if (check_radio_selected("type-repair2", "Укажите функционал")) {
+        if (check_radio_selected("functionality", "Укажите функционал")) {
             to_step(4, true);
         }
     });
     $("#to_step5").click(function(event) {
         event.preventDefault();
-        if (check_radio_selected("purchase", "Укажите права пользования")) {
+        if (check_radio_selected("use-rights", "Укажите права пользования")) {
             to_step(5, true);
         }
     });
 
    $("#to_step6").click(function(event) {
         event.preventDefault();
-        if (check_radio_selected("repair-date", "Укажите сторонние сервисы")) {
+        if (check_radio_selected("services", "Укажите сторонние сервисы")) {
             to_step(6, true);
         }
     });

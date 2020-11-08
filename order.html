@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SBS</title>
     <meta name="description" content="" />
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#9f00a7">
+    <meta name="msapplication-config" content="img/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="./css/slick.css" />
     <link rel="stylesheet" href="./css/slick-theme.css" />
     <link rel="stylesheet" href="./css/order.min.css" />
@@ -192,15 +201,14 @@
                 <p class="quiz__subtitle">
                   Выберете один или несколько пунктов и нажмите «далее»
                 </p>
-                <div id="type-home1" class="step-quest">
+                <div id="platform" class="step-quest">
                   <div data-tooltip="Mобильное приложение для платформы IOS">
                     <label for="tovar0">
                       <input
                         id="tovar0"
                         value="60000"
-                       
                         type="checkbox"
-                        name="type-home1"
+                        name="platform"
                         class="calc"
                       />
                       <img src="img/ios_order.svg" alt="1step" />
@@ -214,9 +222,8 @@
                       <input
                         id="tovar1"
                         value="20000"
-                        
                         type="checkbox"
-                        name="type-home1"
+                        name="platform"
                         class="calc"
                       />
                       <img src="img/android_order.svg" alt="2step" />
@@ -378,7 +385,7 @@
                   <p class="quiz__subtitle">
                     Выберете один или несколько пунктов и нажмите «далее»
                   </p>
-                  <div id="type-home2" class="step-quest">
+                  <div id="number-of-screens" class="step-quest">
                     <div
                       data-tooltip="Простое маленькое приложение(например, справочник курса валют или приложение для чтения новостей)."
                     >
@@ -387,7 +394,7 @@
                           id="tovar2"
                           value="20000"
                           type="radio"
-                          name="type-home2"
+                          name="number-of-screens"
                           class="calc"
                         />
                         <img src="img/s.svg" alt="1step" />
@@ -404,7 +411,7 @@
                           id="tovar3"
                           value="40000"
                           type="radio"
-                          name="type-home2"
+                          name="number-of-screens"
                           class="calc"
                         />
                         <img src="img/m.svg" alt="2step" />
@@ -421,7 +428,7 @@
                           id="tovar4"
                           value="60000"
                           type="radio"
-                          name="type-home2"
+                          name="number-of-screens"
                           class="calc"
                         />
                         <img src="img/l.svg" alt="2step" />
@@ -572,7 +579,7 @@
                   <p class="quiz__subtitle">
                     Выберете один или несколько пунктов и нажмите «далее»
                   </p>
-                  <div id="type-repair" class="step-quest">
+                  <div id="design" class="step-quest">
                     <div
                       data-tooltip="Уровень дизайна простейший,упор на функциональность и/или проверку гепотизы."
                     >
@@ -581,7 +588,7 @@
                           id="tovar5"
                           value="30000"
                           type="radio"
-                          name="type-repair"
+                          name="design"
                           class="calc"
                         />
                         <img src="img/d1.svg" alt="icon" />
@@ -596,7 +603,7 @@
                           id="tovar6"
                           value="40000"
                           type="radio"
-                          name="type-repair"
+                          name="design"
                           class="calc"
                         />
                         <img src="img/d2.svg" alt="icon" />
@@ -611,7 +618,7 @@
                           id="tovar7"
                           value="60000"
                           type="radio"
-                          name="type-repair"
+                          name="design"
                           class="calc"
                         />
                         <img src="img/d3.svg" alt="icon" />
@@ -758,14 +765,14 @@
                 <p class="quiz__subtitle">
                   Выберете один или несколько пунктов и нажмите «далее»
                 </p>
-                <div id="type-repair2" class="step-quest">
+                <div id="functionality" class="step-quest">
                   <div data-tooltip="Переписка / чат между пользователями.">
                     <label for="tovar8">
                       <input
                         id="tovar8"
                         value="20000"
                         type="checkbox"
-                        name="type-repair2"
+                        name="functionality"
                         class="calc"
                       />
                       <img src="img/f1.svg" alt="icon" />
@@ -780,7 +787,7 @@
                         id="tovar9"
                         value="15000"
                         type="checkbox"
-                        name="type-repair2"
+                        name="functionality"
                         class="calc"
                       />
                       <img src="img/f2.svg" alt="icon" />
@@ -795,7 +802,7 @@
                         id="tovar10"
                         value="8000"
                         type="checkbox"
-                        name="type-repair2"
+                        name="functionality"
                         class="calc"
                       />
                       <img src="img/f3.svg" alt="icon" />
@@ -810,7 +817,7 @@
                         id="tovar11"
                         value="10000"
                         type="checkbox"
-                        name="type-repair2"
+                        name="functionality"
                         class="calc"
                       />
                       <img src="img/f4.svg" alt="icon" />
@@ -825,7 +832,7 @@
                         id="tovar12"
                         value="12000"
                         type="checkbox"
-                        name="type-repair2"
+                        name="functionality"
                         class="calc"
                       />
                       <img src="img/f5.svg" alt="icon" />
@@ -840,7 +847,7 @@
                         id="tovar13"
                         value="20000"
                         type="checkbox"
-                        name="type-repair2"
+                        name="functionality"
                         class="calc"
                       />
                       <img src="img/f6.svg" alt="icon" />
@@ -855,7 +862,7 @@
                         id="tovar14"
                         value="18000"
                         type="checkbox"
-                        name="type-repair2"
+                        name="functionality"
                         class="calc"
                       />
                       <img src="img/f7.svg" alt="icon" />
@@ -933,7 +940,7 @@
                 <p class="quiz__subtitle">
                   Выберете один или несколько пунктов и нажмите «далее»
                 </p>
-                <div id="purchase" class="step-quest">
+                <div id="use-rights" class="step-quest">
                   <div
                     data-tooltip="Уровень дизайна простейший,упор на функциональность и/или проверку гепотизы."
                   >
@@ -942,7 +949,7 @@
                         id="tovar15"
                         value="5000"
                         type="checkbox"
-                        name="purchase"
+                        name="use-rights"
                         class="calc"
                       />
                       <img src="img/prav1.svg" alt="icon" />
@@ -957,7 +964,7 @@
                         id="tovar16"
                         value="5000"
                         type="checkbox"
-                        name="purchase"
+                        name="use-rights"
                         class="calc"
                       />
                       <img src="img/prav2.svg" alt="icon" />
@@ -972,7 +979,7 @@
                         id="tovar17"
                         value="8500"
                         type="checkbox"
-                        name="purchase"
+                        name="use-rights"
                         class="calc"
                       />
                       <img src="img/prav3.svg" alt="icon" />
@@ -987,7 +994,7 @@
                         id="tovar18"
                         value="15500"
                         type="checkbox"
-                        name="purchase"
+                        name="use-rights"
                         class="calc"
                       />
                       <img src="img/prav4.svg" alt="icon" />
@@ -1067,7 +1074,7 @@
                 <p class="quiz__subtitle">
                   Выберете один или несколько пунктов и нажмите «далее»
                 </p>
-                <div id="repair-date" class="step-quest">
+                <div id="services" class="step-quest">
                   <div
                     data-tooltip="Например, интеграция с погодной службой, для отображения погоды в вашем приложении."
                   >
@@ -1076,7 +1083,7 @@
                         id="tovar19"
                         value="24000"
                         type="checkbox"
-                        name="repair-date"
+                        name="services"
                         class="calc"
                       />
                       <img src="img/ser1.svg" alt="icon" />
@@ -1093,7 +1100,7 @@
                         id="tovar20"
                         value="16000"
                         type="checkbox"
-                        name="repair-date"
+                        name="services"
                         class="calc"
                       />
                       <img src="img/ser2.svg" alt="icon" />
@@ -1110,7 +1117,7 @@
                         id="tovar21"
                         value="10000"
                         type="checkbox"
-                        name="repair-date"
+                        name="services"
                         class="calc"
                       />
                       <img src="img/ser3.svg" alt="icon" />
@@ -1147,7 +1154,7 @@
                     <input
                       id="name_input"
                       type="text"
-                      name="name_input"
+                      name="Имя"
                       placeholder="Имя"
                       required
                     />
@@ -1156,7 +1163,7 @@
                     <input
                       id="phone_input"
                       type="tel"
-                      name="phone"
+                      name="Телефон"
                       placeholder="+7 999 888 7766"
                       required
                     />
@@ -1165,7 +1172,7 @@
                     <input
                       id="email_input"
                       type="email"
-                      name="email_input"
+                      name="Email"
                       placeholder="E-mail"
                     />
                   </div>

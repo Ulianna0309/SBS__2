@@ -697,13 +697,13 @@ body {
   text-align: center;
 }
 
-#repair-date > *,
-#purchase > *,
-#type-repair2 > *,
-#type-home2 > *,
-#type-home1 > *,
+#services > *,
+#use-rights > *,
+#functionality > *,
+#number-of-screens > *,
+#platform > *,
 #type-home > *,
-#type-repair > * {
+#design > * {
   text-align: center;
 }
 
@@ -843,6 +843,7 @@ body {
   display: block;
   padding: 20px 10px;
   height: 100%;
+  text-align: center;
 }
 .step-quest {
   display: -webkit-box;
@@ -1045,12 +1046,12 @@ body {
 .slick-initialized .slick-slide {
   outline: none;
 }
-div#type-home1 img,
-div#type-home2 img,
-div#type-repair img,
-div#type-repair2 img,
-div#purchase img,
-div#repair-date img {
+div#platform img,
+div#number-of-screens img,
+div#design img,
+div#functionality img,
+div#use-rights img,
+div#services img {
     margin-right: 0;
 }
 [data-tooltip] {
@@ -1294,7 +1295,7 @@ input[type="text"] {
     margin-bottom: 15px;
   }
   #type-home > *,
-  #type-repair > * {
+  #design > * {
     text-align: left;
     margin-bottom: 15px;
   }
@@ -1354,12 +1355,12 @@ input[type="text"] {
     margin-bottom: 40px !important;
   }
   .step-quest > *,
-  #type-home > *,
-  #type-home2 > *,
-  #type-repair > *,
-  #type-repair2 > *,
-  #purchase > *,
-  #repair-date > * {
+  #platform > *,
+  #number-of-screens > *,
+  #design > *,
+  #functionality > *,
+  #use-rights > *,
+  #services > * {
     width: 90%;
   }
 }
@@ -1368,11 +1369,7 @@ input[type="text"] {
   #quiz h2 {
     font-size: 1.6rem;
   }
-  .step-quest > *,
-  #type-home > *,
-  #type-repair > *,
-  #contact_fields > * {
-  }
+  
   .quiz_buttons {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
@@ -1713,15 +1710,15 @@ input[type="text"] {
   #repair-date1 > *,
   #purchase1 > *,
   #type-repair123 > *,
-  #type-repair1 > *,
+  #design > *,
   #type-home123 > *,
-  #repair-date > *,
-  #purchase > *,
-  #type-repair2 > *,
-  #type-home2 > *,
-  #type-home1 > *,
+  #services > *,
+  #use-rights > *,
+  #functionality > *,
+  #number-of-screens> *,
+  #platform > *,
   #type-home > *,
-  #type-repair > * {
+  #design > * {
     text-align: center;
     width: 270px;
     margin-bottom: 5px;
@@ -1742,13 +1739,13 @@ input[type="text"] {
   #type-repair123 > *,
   #type-repair1 > *,
   #type-home123 > *,
-  #repair-date > *,
-  #purchase > *,
-  #type-repair2 > *,
+  #services > *,
+  #use-rights > *,
+  #functionality > *,
   #type-home2 > *,
-  #type-home1 > *,
+  #platform > *,
   #type-home > *,
-  #type-repair > * {
+  #design > * {
     width: 270px;
   }
 }
