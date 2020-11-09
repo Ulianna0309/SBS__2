@@ -86,10 +86,10 @@
             </a>
           </div>
           <div id="quiz">
-            <form method="POST" id="quiz_form" name="form">
-              <input type="hidden" name="project_name" value="Вам оставили заявку на расчет проекта">
+            <form id="quiz_form" name="form" action="quiz.php">
+              <input type="hidden" name="project_name" value="SBS">
               <input type="hidden" name="admin_email" value="adminwm@mail.ru">
-              <input type="hidden" name="form_subject" value="Form Subject">
+              <input type="hidden" name="form_subject" value="Вам оставили заявку на расчет проекта">
               <div id="step0">
                 <h1 class="quiz__title">Рассчитайте стоимость услуги</h1>
                 <p class="quiz__text">
@@ -242,7 +242,7 @@
                       type="text"
                       class="sum"
                       name="sum"
-                      
+                      data="sum"
                       value="0"
                     />
                     <p class="inout__span">p</p>
@@ -256,7 +256,7 @@
                       type="text"
                       class="sum"
                       name="sum"
-                      
+                      data="sum"
                       value="0"
                     />
                     <p class="inout__span">p</p>
@@ -644,7 +644,7 @@
                       <p class="quiz__about">
                         Предварительная <br />стоимость вашего проекта:
                       </p>
-                      <input type="text" name="sum" class="sum" />
+                      <input type="text" name="sum" data="sum" class="sum" />
                       <p class="inout__span">p</p>
                     </div>
                     <p><a id="to_step3" class="btn">Далее</a></p>
@@ -895,7 +895,7 @@
                     <p class="quiz__about">
                       Предварительная <br />стоимость вашего проекта:
                     </p>
-                    <input type="text" name="sum" class="sum" />
+                    <input type="text" name="sum" data="sum" class="sum" />
                     <p class="inout__span">p</p>
                   </div>
                   <p><a id="to_step4" class="btn">Далее</a></p>
@@ -1031,7 +1031,7 @@
                     <p class="quiz__about">
                       Предварительная <br />стоимость вашего проекта:
                     </p>
-                    <input type="text" name="sum" class="sum" />
+                    <input type="text" name="sum" class="sum" data="sum" />
                     <p class="inout__span">p</p>
                   </div>
                   <p><a id="to_step5" class="btn">Далее</a></p>
@@ -1157,7 +1157,7 @@
                     <p class="quiz__about">
                       Предварительная <br />стоимость вашего проекта:
                     </p>
-                    <input type="text" name="sum" class="sum" />
+                    <input type="text" name="sum" class="sum" data="sum" />
                     <p class="inout__span">p</p>
                   </div>
                   <p><a id="to_step6" class="btn">Далее</a></p>
@@ -1174,29 +1174,27 @@
                 <div id="contact_fields" class="step-quest">
                   <div>
                     <input
-                      id="name_input"
-                      type="text"
-                      name="name"
-                      placeholder="Имя"
-                      required
+                      id="name_input" type="text" name="Имя" placeholder="Имя" required="required" data="name"
                     />
                   </div>
                   <div>
                     <input
                       id="phone_input"
                       type="tel"
-                      name="phone"
+                      name="Телефон"
                       placeholder="+7 999 888 7766"
-                      required
+                      required="required"
+                      data="phone"
                     />
                   </div>
                   <div>
                     <input
                       id="email_input"
                       type="email"
-                      name="email"
+                      name="Email"
                       placeholder="E-mail"
                       required
+                      data="email"
                     />
                   </div>
                 </div>

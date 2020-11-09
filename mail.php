@@ -1,7 +1,7 @@
 <?php
 
 $method = $_SERVER['REQUEST_METHOD'];
-
+$theme = "Вам оставили";
 //Script Foreach
 $c = true;
 if ( $method === 'POST' ) {
@@ -46,8 +46,7 @@ function adopt($text) {
 
 $headers = "MIME-Version: 1.0" . PHP_EOL .
 "Content-Type: text/html; charset=utf-8" . PHP_EOL .
- echo '<p>Вам оставили заявку на консультацию</p>'.
 'From: '.adopt($project_name).' <'.$admin_email.'>' . PHP_EOL .
 'Reply-To: '.$admin_email.'' . PHP_EOL;
 
-mail($project_name, $admin_email, adopt($form_subject), $message, $headers );
+mail($admin_email, adopt($form_subject), $message, $headers );

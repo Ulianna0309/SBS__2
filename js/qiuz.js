@@ -240,11 +240,11 @@ function validateEmail($email) {
     });
     
     // Проверка телефона и ПК при отправке формы
-   $('form').submit(function () {
+  $('#contact_fields').submit(function () {
         
-        var name = $.trim($(this).find('input[name="name"]').val());
-        var phone = $.trim($(this).find('input[name="phone"]').val());
-        var email = $.trim($(this).find('input[name="email"]').val());
+        var name = $.trim($(this).find('input[data="name"]').val());
+        var phone = $.trim($(this).find('input[data="phone"]').val());
+        var email = $.trim($(this).find('input[data="email"]').val());
         
         if (name  === '') {
             alert('Заполните поле с именем');
@@ -272,26 +272,7 @@ function validateEmail($email) {
         }
         
     });
-
-   $(document).ready(function() {
-    //E-mail Ajax Send
-    $("#quiz_form").submit(function() { //Change
-        var th = $(this);
-        $.ajax({
-            type: "POST",
-            url: "quiz.php", //Change
-            data: th.serialize()
-        }).done(function() {
-            alert("Спасибо!Мы с вами свяжемся в ближайшее время!");
-            setTimeout(function() {
-                // Done Functions
-                th.trigger("reset");
-            }, 1000);
-        });
-        return false;
-    });
-});
-
+ 
 
     // для возврата к предыдущему вопросу
     window.addEventListener("popstate", function(e) {
@@ -333,6 +314,27 @@ $(document).ready(function() {
     // Поле ввода внутри label для input[type=radio]
     $("#up-layer").click(function() { $("#price_input").focus(); });
     
+});
+
+$(document).ready(function() {
+
+    //E-mail Ajax Send
+    $("form").submit(function() { //Change
+        var th = $(this);
+        $.ajax({
+            type: "POST",
+            url: "quiz.php", //Change
+            data: th.serialize()
+        }).done(function() {
+            alert("Спасибо!Мы с вями свяжемся в ближайшее время!");
+            setTimeout(function() {
+                // Done Functions
+                th.trigger("reset");
+            }, 1000);
+        });
+        return false;
+    });
+
 });
 
 
