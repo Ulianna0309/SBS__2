@@ -1,79 +1,53 @@
+<?php
 
-<?php /*Template Name: Благодарность*/ ?>
+$method = $_SERVER['REQUEST_METHOD'];
 
-<?php get_header(); ?>
+//Script Foreach
+$c = true;
+if ( $method === 'POST' ) {
 
-<?php 
-if (!isset ($_POST['uri'])) {
-    echo 'Нет данных для обработки. Попробуйте <a href="index.html">Перейти на главную</a>';
-    exit();
+	$project_name = trim($_POST["project_name"]);
+	$admin_email  = trim($_POST["admin_email"]);
+	$form_subject = trim($_POST["form_subject"]);
+
+	foreach ( $_POST as $key => $value ) {
+		if ( $value != "" && $key != "project_name" && $key != "admin_email" && $key != "form_subject" ) {
+			$message .= "
+			" . ( ($c = !$c) ? '<tr>':'<tr style="background-color: #f8f8f8;">' ) . "
+				<td style='padding: 10px; border: #e9e9e9 1px solid;'><b>$key</b></td>
+				<td style='padding: 10px; border: #e9e9e9 1px solid;'>$value</td>
+			</tr>
+			";
+		}
+	}
+} else if ( $method === 'GET' ) {
+
+	$project_name = trim($_GET["project_name"]);
+	$admin_email  = trim($_GET["admin_email"]);
+	$form_subject = trim($_GET["form_subject"]);
+
+	foreach ( $_GET as $key => $value ) {
+		if ( $value != "" && $key != "project_name" && $key != "admin_email" && $key != "form_subject" ) {
+			$message .= "
+			" . ( ($c = !$c) ? '<tr>':'<tr style="background-color: #f8f8f8;">' ) . "
+				<td style='padding: 10px; border: #e9e9e9 1px solid;'><b>$key</b></td>
+				<td style='padding: 10px; border: #e9e9e9 1px solid;'>$value</td>
+			</tr>
+			";
+		}
+	}
 }
 
-$uri = isset($_POST['uri']) ? $_POST['uri'] : "";
+$message = "<table style='width: 100%;'>$message</table>";
 
-$platform = isset($_POST['platform']) ? $_POST['platform'] : "";
-$number_of_screens = isset($_POST['number-of-screens']) ? $_POST['number-of-screens'] : "";
+function adopt($text) {
+	return '=?UTF-8?B?'.Base64_encode($text).'?=';
+}
 
-$design = isset($_POST['design']) ? $_POST['design'] : "";
-$functionality = isset($_POST['functionality']) ? $_POST['functionality'] : "";
-$use_rights = isset($_POST['use-rights']) ? $_POST['use-rights'] : "";
+$headers = "MIME-Version: 1.0" . PHP_EOL .
+"Content-Type: text/html; charset=utf-8" . PHP_EOL .
+ echo '<p>Вам оставили заявку на расчет проекта</p>'.
+'From: '.adopt($project_name).' <'.$admin_email.'>' . PHP_EOL .
+'Reply-To: '.$admin_email.'' . PHP_EOL;
 
-$services = isset($_POST['services']) ? $_POST['services'] : "";
-$sum =  isset($_POST['sum']) ? $_POST['sum'] : "";
-$name = isset($_POST['name_input']) ? $_POST['name_input'] : "";
-$phone = isset($_POST['phone']) ? $_POST['phone'] : "";
-$email_client = isset($_POST['email_input']) ? $_POST['email_input'] : "";
-
-
-
-// Отправка письма
- 
-$address = "adminwm@mail.ru";
-
-$mes = "Вам оставили заявку на расчет проекта
-Имя: $name\n
-Телефон: $phone\n
-E-mail: $email_client\n
-
-	Мобильные платформы: $platform\n
-	Колличество экранов: $number-of-screens\n
-	Дизайн: $design\n
-	Функционал: $functionality\n
-	Права пользования: $use-rights\n
-	Сторонние сервисы: $services\n";
-	
-	
-$sub = "Рассчет стоимости";
-
-$email = "SBS";
-
-$send = mail ($address,$sub,$mes,"Content-type:text/plain; charset = utf-8\r\nFrom:".$email);
-?>
-
-<main role="main">
-  
-	<section id="main-content"><div class="wrapper box">
-
-		<?php //get_sidebar(); ?>
-
-		<div id="content" class="block-12">  
-
-			<?php if (have_posts()) : ?>	
-			<?php while (have_posts()) : the_post(); ?>  
-
-				<div id="post-content" class="area">
-					<?php echo do_shortcode( '[site-breadcrumbs]' ); ?>
-					<h1 id="title"><?php the_title(); ?></h1>
-					<?php the_content(); ?>
-				</div>
-
-			<?php endwhile; ?>
-			<?php endif; ?> 
-
-		</div>  
-
-	</div></section>
-
-</main>
-
-<?php get_footer(); ?>
+mail($project_name, $admin_email, adopt($form_subject), $message, $headers );

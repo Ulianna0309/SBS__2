@@ -148,14 +148,13 @@ function to_step(index, need_push) {
 
 // Проверка заполненности радиокнопки или чекбокса
 function check_radio_selected(elem_id, error_message) {
-    obj = $('input[name="' + elem_id + '"]:checked');
+    obj = $('input[data="' + elem_id + '"]:checked');
     if (!(obj.length && obj.val())) {
         alert(error_message);
         return false;
     }
     return true;
 }
-
 
 // Проверка площади
 function check_area() {
@@ -241,7 +240,7 @@ function validateEmail($email) {
     });
     
     // Проверка телефона и ПК при отправке формы
-    $('#quiz_form').submit(function () {
+   $('form').submit(function () {
         
         var name = $.trim($(this).find('input[name="name"]').val());
         var phone = $.trim($(this).find('input[name="phone"]').val());
@@ -263,18 +262,35 @@ function validateEmail($email) {
             return false;
         }
         
-        
         if(email  === '' || !validateEmail(email)) { 
             alert('Введите корректный E-mail');
             return false;
         }
-        
         if (!$('input:checkbox[name="acceptance"]').is(':checked')) {
             alert('Вы должны ознакомиться с политикой конфиденциальности');
             return false;
         }
         
     });
+
+   $(document).ready(function() {
+    //E-mail Ajax Send
+    $("#quiz_form").submit(function() { //Change
+        var th = $(this);
+        $.ajax({
+            type: "POST",
+            url: "quiz.php", //Change
+            data: th.serialize()
+        }).done(function() {
+            alert("Спасибо!Мы с вами свяжемся в ближайшее время!");
+            setTimeout(function() {
+                // Done Functions
+                th.trigger("reset");
+            }, 1000);
+        });
+        return false;
+    });
+});
 
 
     // для возврата к предыдущему вопросу
@@ -319,24 +335,5 @@ $(document).ready(function() {
     
 });
 
-$(document).ready(function() {
 
-    //E-mail Ajax Send
-    $("form").submit(function() { //Change
-        var th = $(this);
-        $.ajax({
-            type: "POST",
-            url: "quiz.php", //Change
-            data: th.serialize()
-        }).done(function() {
-            alert("Спасибо!Мы с вами свяжемся в ближайшее время!");
-            setTimeout(function() {
-                // Done Functions
-                th.trigger("reset");
-            }, 1000);
-        });
-        return false;
-    });
-
-});
 

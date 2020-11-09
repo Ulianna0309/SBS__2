@@ -87,10 +87,9 @@
           </div>
           <div id="quiz">
             <form method="POST" id="quiz_form" name="form">
-                <input type="hidden" name="uri" value="adminwm@mail.ru"/>
-        <!--     <input type="hidden" name="project_name" value="Site Name">
-                <input type="hidden" name="admin_email" value="adminwm@mail.ru">
-                <input type="hidden" name="form_subject" value="Form Subject">-->
+              <input type="hidden" name="project_name" value="Вам оставили заявку на расчет проекта">
+              <input type="hidden" name="admin_email" value="adminwm@mail.ru">
+              <input type="hidden" name="form_subject" value="Form Subject">
               <div id="step0">
                 <h1 class="quiz__title">Рассчитайте стоимость услуги</h1>
                 <p class="quiz__text">
@@ -209,8 +208,9 @@
                         id="tovar0"
                         value="60000"
                         type="checkbox"
-                        name="platform"
+                        name="IOS"
                         class="calc"
+                        data="platform"
                       />
                       <img src="img/ios_order.svg" alt="1step" />
                       <span class="input__desc-name">IOS</span>
@@ -224,8 +224,9 @@
                         id="tovar1"
                         value="20000"
                         type="checkbox"
-                        name="platform"
+                        name="Android"
                         class="calc"
+                        data="platform"
                       />
                       <img src="img/android_order.svg" alt="2step" />
                       <span class="input__desc-name">Android</span>
@@ -395,8 +396,9 @@
                           id="tovar2"
                           value="20000"
                           type="radio"
-                          name="number-of-screens"
+                          data="number-of-screens"
                           class="calc"
+                          name="Колличество экранов до 7"
                         />
                         <img src="img/s.svg" alt="1step" />
                         <span class="input__desc-name"
@@ -412,8 +414,9 @@
                           id="tovar3"
                           value="40000"
                           type="radio"
-                          name="number-of-screens"
+                          data="number-of-screens"
                           class="calc"
+                          name="Колличество экранов 8-15"
                         />
                         <img src="img/m.svg" alt="2step" />
                         <span class="input__desc-name"
@@ -429,8 +432,9 @@
                           id="tovar4"
                           value="60000"
                           type="radio"
-                          name="number-of-screens"
+                          data="number-of-screens"
                           class="calc"
+                          name="Колличество экранов 15+"
                         />
                         <img src="img/l.svg" alt="2step" />
                         <span class="input__desc-name"
@@ -589,8 +593,9 @@
                           id="tovar5"
                           value="30000"
                           type="radio"
-                          name="design"
+                          data="design"
                           class="calc"
+                          name="Прототип"
                         />
                         <img src="img/d1.svg" alt="icon" />
                         <span class="input__desc-name">Прототип</span>
@@ -604,8 +609,9 @@
                           id="tovar6"
                           value="40000"
                           type="radio"
-                          name="design"
+                          data="design"
                           class="calc"
+                          name="Обычный"
                         />
                         <img src="img/d2.svg" alt="icon" />
                         <span class="input__desc-name">Обычный</span>
@@ -619,8 +625,9 @@
                           id="tovar7"
                           value="60000"
                           type="radio"
-                          name="design"
+                          data="design"
                           class="calc"
+                          name="Кастомный"
                         />
                         <img src="img/d3.svg" alt="icon" />
                         <span class="input__desc-name">Кастомный</span>
@@ -773,8 +780,9 @@
                         id="tovar8"
                         value="20000"
                         type="checkbox"
-                        name="functionality"
+                        data="functionality"
                         class="calc"
+                        name="Сообщения"
                       />
                       <img src="img/f1.svg" alt="icon" />
                       <span class="input__desc-name">Сообщения</span>
@@ -788,8 +796,9 @@
                         id="tovar9"
                         value="15000"
                         type="checkbox"
-                        name="functionality"
+                        data="functionality"
                         class="calc"
+                        name="Медиа"
                       />
                       <img src="img/f2.svg" alt="icon" />
                       <span class="input__desc-name">Медиа</span>
@@ -803,8 +812,9 @@
                         id="tovar10"
                         value="8000"
                         type="checkbox"
-                        name="functionality"
+                        data="functionality"
                         class="calc"
+                        name="Поиск"
                       />
                       <img src="img/f3.svg" alt="icon" />
                       <span class="input__desc-name">Поиск</span>
@@ -818,8 +828,9 @@
                         id="tovar11"
                         value="10000"
                         type="checkbox"
-                        name="functionality"
+                        data="functionality"
                         class="calc"
+                        name="Локация карты"
                       />
                       <img src="img/f4.svg" alt="icon" />
                       <span class="input__desc-name">Локация карты</span>
@@ -833,8 +844,9 @@
                         id="tovar12"
                         value="12000"
                         type="checkbox"
-                        name="functionality"
+                        data="functionality"
                         class="calc"
+                        name="Push - нотификация"
                       />
                       <img src="img/f5.svg" alt="icon" />
                       <span class="input__desc-name">Push - нотификация</span>
@@ -848,8 +860,9 @@
                         id="tovar13"
                         value="20000"
                         type="checkbox"
-                        name="functionality"
+                        data="functionality"
                         class="calc"
+                        name="Онлайн оплата"
                       />
                       <img src="img/f6.svg" alt="icon" />
                       <span class="input__desc-name">Онлайн оплата</span>
@@ -863,8 +876,9 @@
                         id="tovar14"
                         value="18000"
                         type="checkbox"
-                        name="functionality"
+                        data="functionality"
                         class="calc"
+                        name="История"
                       />
                       <img src="img/f7.svg" alt="icon" />
                       <span class="input__desc-name">История</span>
@@ -950,8 +964,9 @@
                         id="tovar15"
                         value="5000"
                         type="checkbox"
-                        name="use-rights"
+                        data="use-rights"
                         class="calc"
+                        name="Регистрация"
                       />
                       <img src="img/prav1.svg" alt="icon" />
                       <span class="input__desc-name">Регистрация</span>
@@ -965,8 +980,9 @@
                         id="tovar16"
                         value="5000"
                         type="checkbox"
-                        name="use-rights"
+                        data="use-rights"
                         class="calc"
+                        name="Авторизация"
                       />
                       <img src="img/prav2.svg" alt="icon" />
                       <span class="input__desc-name">Авторизация</span>
@@ -980,8 +996,9 @@
                         id="tovar17"
                         value="8500"
                         type="checkbox"
-                        name="use-rights"
+                        data="use-rights"
                         class="calc"
+                        name="Личный кабинет"
                       />
                       <img src="img/prav3.svg" alt="icon" />
                       <span class="input__desc-name">Личный кабинет</span>
@@ -995,8 +1012,9 @@
                         id="tovar18"
                         value="15500"
                         type="checkbox"
-                        name="use-rights"
+                        data="use-rights"
                         class="calc"
+                        name="Админ панель"
                       />
                       <img src="img/prav4.svg" alt="icon" />
                       <span class="input__desc-name">Админ панель</span>
@@ -1084,8 +1102,9 @@
                         id="tovar19"
                         value="24000"
                         type="checkbox"
-                        name="services"
+                        data="services"
                         class="calc"
+                        name="Интеграция с одним или более сторонних сервисов"
                       />
                       <img src="img/ser1.svg" alt="icon" />
                       <span class="input__desc-name"
@@ -1101,8 +1120,9 @@
                         id="tovar20"
                         value="16000"
                         type="checkbox"
-                        name="services"
+                        data="services"
                         class="calc"
+                        name="Создание API для интеграции с Вашим сервисом"
                       />
                       <img src="img/ser2.svg" alt="icon" />
                       <span class="input__desc-name"
@@ -1118,8 +1138,9 @@
                         id="tovar21"
                         value="10000"
                         type="checkbox"
-                        name="services"
+                        data="services"
                         class="calc"
+                        name="SMS функционал"
                       />
                       <img src="img/ser3.svg" alt="icon" />
                       <span class="input__desc-name">SMS функционал</span>
@@ -1175,6 +1196,7 @@
                       type="email"
                       name="email"
                       placeholder="E-mail"
+                      required
                     />
                   </div>
                 </div>
@@ -1183,7 +1205,7 @@
                     id="acceptance"
                     type="checkbox"
                     name="acceptance"
-                    value=""
+                    required
                     checked
                   />
                   <label for="acceptance"
@@ -1197,7 +1219,7 @@
                   >
                 </div>
                 <p>
-                  <a id="to_submit" class="btn__submit">Узнать стоимость</a>
+                  <button type="submit" id="to_submit" class="btn__submit">Узнать стоимость</button>
                 </p>
               </div>
             </form>
