@@ -85,13 +85,14 @@ function calcscore(){
     $(".calc:checked").each(function(){
         score+=parseInt($(this).val(),10);
     });
-    $("input[name=sum]").val(score)
+    $("input[name=сумма]").val(score)
 }
 $().ready(function(){
     $(".calc").change(function(){
         calcscore()
     });
 });
+
 
 
 
@@ -148,7 +149,7 @@ function to_step(index, need_push) {
 
 // Проверка заполненности радиокнопки или чекбокса
 function check_radio_selected(elem_id, error_message) {
-    obj = $('input[name="' + elem_id + '"]:checked');
+    obj = $('input[data="' + elem_id + '"]:checked');
     if (!(obj.length && obj.val())) {
         alert(error_message);
         return false;
