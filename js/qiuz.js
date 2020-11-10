@@ -148,7 +148,7 @@ function to_step(index, need_push) {
 
 // Проверка заполненности радиокнопки или чекбокса
 function check_radio_selected(elem_id, error_message) {
-    obj = $('input[data="' + elem_id + '"]:checked');
+    obj = $('input[name="' + elem_id + '"]:checked');
     if (!(obj.length && obj.val())) {
         alert(error_message);
         return false;
@@ -238,44 +238,112 @@ function validateEmail($email) {
         event.preventDefault();
         $("#quiz_form").submit();
     });
+  // Проверка телефона и ПК при отправке формы
+
+
+/*$('#quiz_form').submit(function () {
+    var name = $.trim($(this).find('input[name="Имя"]').val());
+    var phone = $.trim($(this).find('input[name="Телефон"]').val());
+    var email = $.trim($(this).find('input[name="Email"]').val());
     
-    // Проверка телефона и ПК при отправке формы
-  $('#contact_fields').submit(function () {
-        
-        var name = $.trim($(this).find('input[data="name"]').val());
-        var phone = $.trim($(this).find('input[data="phone"]').val());
-        var email = $.trim($(this).find('input[data="email"]').val());
-        
-        if (name  === '') {
-            alert('Заполните поле с именем');
-            return false;
-        }
+    if (name  === '') {
+        alert('Заполните поле с именем');
+        return false;
+    }
 
-        if (phone  === '') {
-            alert('Заполните поле с номером телефона');
-            return false;
-        } else if (phone.length < 8) {
-            alert('Слишком короткий номер');
-            return false;
-        } else if (!((phone.lastIndexOf("+7", 0) === 0) || (phone.lastIndexOf("8", 0) === 0))) {
-            alert('Введите корректный номер в формате +79998887766 или 89998887766');
-            return false;
-        }
-        
-        if(email  === '' || !validateEmail(email)) { 
-            alert('Введите корректный E-mail');
-            return false;
-        }
-        if (!$('input:checkbox[name="acceptance"]').is(':checked')) {
-            alert('Вы должны ознакомиться с политикой конфиденциальности');
-            return false;
-        }
-        
+    if (phone  === '') {
+        alert('Заполните поле с номером телефона');
+        return false;
+    } else if (phone.length < 8) {
+        alert('Слишком короткий номер');
+        return false;
+    } else if (!((phone.lastIndexOf("+7", 0) === 0) || (phone.lastIndexOf("8", 0) === 0))) {
+        alert('Введите корректный номер в формате +79998887766 или 89998887766');
+        return false;
+    }
+    
+    if(email  === '' || !validateEmail(email)) { 
+        alert('Введите корректный E-mail');
+        return false;
+    }
+    
+    if (!$('input:checkbox[name="acceptance"]').is(':checked')) {
+        alert('Вы должны ознакомиться с политикой конфиденциальности');
+        return false;
+    }
+});
+
+$(document).ready(function() {
+    //E-mail Ajax Send
+    $("form").submit(function() { //Change
+        var th = $(this);
+        $.ajax({
+            type: "POST",
+            url: "quiz.php", //Change
+            data: th.serialize()
+        }).done(function() {
+            alert("Спасибо!Мы с вями свяжемся в ближайшее время!");
+            setTimeout(function() {
+                // Done Functions
+                th.trigger("reset");
+            }, 1000);
+        });
+        return false;
     });
- 
 
-    // для возврата к предыдущему вопросу
-    window.addEventListener("popstate", function(e) {
+});*/
+$('#quiz_form').submit(function () {
+    var name = $.trim($(this).find('input[name="Имя"]').val());
+    var phone = $.trim($(this).find('input[name="Телефон"]').val());
+    var email = $.trim($(this).find('input[name="Email"]').val());
+    
+    if (name  === '') {
+        alert('Заполните поле с именем');
+        return false;
+    }
+
+    if (phone  === '') {
+        alert('Заполните поле с номером телефона');
+        return false;
+    } else if (phone.length < 8) {
+        alert('Слишком короткий номер');
+        return false;
+    } else if (!((phone.lastIndexOf("+7", 0) === 0) || (phone.lastIndexOf("8", 0) === 0))) {
+        alert('Введите корректный номер в формате +79998887766 или 89998887766');
+        return false;
+    }
+    
+    if(email  === '' || !validateEmail(email)) { 
+        alert('Введите корректный E-mail');
+        return false;
+    }
+    
+    if (!$('input:checkbox[name="acceptance"]').is(':checked')) {
+        alert('Вы должны ознакомиться с политикой конфиденциальности');
+        return false;
+    }
+  
+
+  var th = $(this);
+  $.ajax({
+    type: "POST",
+    url: "quiz.php", //Change
+    data: th.serialize()
+  }).done(function() {
+    alert("Спасибо!Мы с вями свяжемся в ближайшее время!");
+    setTimeout(function() {
+      // Done Functions
+      th.trigger("reset");
+    }, 1000);
+  });
+  return false;
+    
+  
+});
+
+
+// для возврата к предыдущему вопросу
+window.addEventListener("popstate", function(e) {
         var step = 0;
         if (e.state) {
             step = e.state.step_x;
@@ -300,7 +368,7 @@ $(document).ready(function() {
             }   
         });
         
-        // Обводка для label input[type=checkbox]
+   // Обводка для label input[type=checkbox]
         $('input[type=checkbox]').each(function(){
             if ($(this).is(':checked')) {       
                 $(this).parent('label').addClass('checked');
@@ -314,27 +382,6 @@ $(document).ready(function() {
     // Поле ввода внутри label для input[type=radio]
     $("#up-layer").click(function() { $("#price_input").focus(); });
     
-});
-
-$(document).ready(function() {
-
-    //E-mail Ajax Send
-    $("form").submit(function() { //Change
-        var th = $(this);
-        $.ajax({
-            type: "POST",
-            url: "quiz.php", //Change
-            data: th.serialize()
-        }).done(function() {
-            alert("Спасибо!Мы с вями свяжемся в ближайшее время!");
-            setTimeout(function() {
-                // Done Functions
-                th.trigger("reset");
-            }, 1000);
-        });
-        return false;
-    });
-
 });
 
 
